@@ -1,0 +1,12 @@
+.tools/
+node_modules/
+artifacts/
+.codex/
+.agents/
+.env
+.env.*
+*.log
+*.save
+*.saves
+Thumbs.db
+.DS_Store

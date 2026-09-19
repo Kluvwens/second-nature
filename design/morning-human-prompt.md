@@ -1,0 +1,9 @@
+# Morning recovery illustration
+
+Generated with the built-in image generation tool, using `assets/scenes/apartment-arrival.png` as character, setting, and style reference.
+
+Saved artwork: [morning-human.png](../assets/scenes/morning-human.png).
+
+## Exact prompt
+
+Use case: illustration-story. Create a new landscape scene for the adult fantasy cafe game Second Nature. Use the supplied apartment illustration as character identity, exact room, clothing and art-style reference. Mara Ellis is an adult woman age 26, light olive skin, familiar freckles, gray-green eyes, wavy chestnut hair and brass clip. She is entirely HUMAN again: normal skin and hair, no honey, no golden liquid or magical residue. Morning after a frightening magical transformation that wore off overnight. She sits on the edge of the same narrow bed with sage blanket, dressed modestly in an opaque loose dark green sleep T-shirt and full-length charcoal pajama pants. She holds her normal hands near her face, pressing a thumb into the opposite palm to check that they are solid, with an expression of immense exhausted relief and lingering disbelief; eyes slightly wet, a small shaky exhale, not a glamorous smile. Preserve adult face and natural proportions. Same small studio: rainy sash window, wooden desk and chipped blue mug, brass lamp, wall mirror, kitchenette and suitcase on the floor. Cool early daylight with gentle warm lamplight, amber and brown shadows. Simple clean cel-shaded anime, expressive tapered linework, broad clear color shapes and restrained airbrushed textures. Medium-wide composition that clearly shows both her adult face and human hands; one coherent person with a consistent optional reflection. No words, no labels, no watermark, no nudity, no sexual posing. The focus is psychological relief and recognition.

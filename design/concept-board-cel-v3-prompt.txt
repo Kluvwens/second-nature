@@ -1,0 +1,20 @@
+Use case: style-transfer.
+Asset type: revised clean cel-shaded anime character and cafe concept board for "SECOND NATURE".
+Input image: EDIT TARGET and character identity reference. Preserve its four adult characters, names, ages, skin tones, hair colors, outfits, overall poses, character order, and cafe-above/cast-below board layout. Change the illustration treatment throughout.
+Primary request: redraw with a SUBSTANTIALLY SIMPLER CLEAN CEL-SHADED ANIME STYLE WITH SOFT AIRBRUSHED TEXTURES AND EXPRESSIVE LINEWORK. A fresh redraw with dramatically reduced visual detail, not a filter over the existing detailed painting.
+Rendering rules:
+- Strong readable silhouettes. Each material has a clear flat base color and one clean-edged graphic shadow tone, with a few restrained highlights.
+- Add controlled velvety airbrushed gradients inside the large color shapes: gentle warmth on cheeks and noses, subtle hair sheen, soft ambient light on clothing. Keep the graphic cel-shadow boundaries crisp. The airbrush finish is smooth and luminous, not gritty grain or canvas.
+- Lively tapered expressive ink lines with obvious line-weight variation: confident thicker outer contours, thin selective interior lines, elegant curves around cheeks, eyelids, eyebrows, hands and hair.
+- Simplify facial features into attractive expressive anime designs, slightly more stylized than the reference while retaining visibly adult ages and distinct face shapes.
+- Group hair into a handful of large designed locks and shapes. Strongly reduce individual hair strands, crosshatching, tiny braid detailing, wrinkles, seams, fabric folds, and accessory microdetail. Nadia's braids remain recognizable as bold grouped braided shapes.
+- Clothing uses a few meaningful folds with broad shadow shapes, no rendered fabric weave. Natural adult proportions and ordinary workwear.
+- Simplify the cafe panorama equally: a few clean architectural shapes, broad window panels, grouped green tiles, simple copper espresso machine, warm pendant lights, blue evening rain. Remove the reference's clutter and densely painted tiny objects. Clean graphic background with restrained airbrushed atmosphere.
+Character identities, left to right:
+"MARA ELLIS · 26": adult woman, light olive skin, a few characteristic freckles, gray-green eyes, wavy chestnut hair half tied with brass clip, forest-green shirt, charcoal apron, mug in hands; wry slightly uncertain smile, expressive eyebrows.
+"INEZ VALE · 42": adult woman, warm brown skin, angular mature face, chin-length black bob and silver streak, plum blouse and charcoal apron, brass earrings; knowing welcoming smile, visibly older than Mara.
+"THEO PARK · 29": adult East Asian man, broad sturdy build, short untidy black hair, square black glasses, clay-brown overshirt and green apron, holding cup and towel; friendly relaxed smile.
+"NADIA BELL · 27": adult Black woman, dark brown skin, copper-tipped braids in bun, camel coat over navy medical scrubs, crossbody strap; affectionate skeptical expression with one brow raised.
+Palette: clear cream, espresso brown, forest jade, muted plum, warm copper, rainy blue. Slightly fresher cleaner colors than the reference, balanced natural skin tones. Warm ivory behind the cast.
+Typography: only title "SECOND NATURE" and the exact four name-and-age captions above. No other text.
+Keep all four portraits equally readable, approximately thigh-up. Maintain clothing, identities, and composition; simplify rendering decisively. No photorealism, dense painterly detail, 3D lighting, heavy texture, chibi proportions, childlike appearance, exaggerated anatomy, extra people, or watermark. Fully clothed ordinary character concept art.

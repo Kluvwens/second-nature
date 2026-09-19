@@ -1,0 +1,17 @@
+:: OtherGallery
+<p class="dialog-intro">Your transformations, the work sessions, and moments afterward. More illustrations appear as you reach those scenes. Choose View illustration, then Open full-resolution image to see the original.</p>
+<div class="other-collection">
+<<if $run.arc && Object.keys($run.arc.discoveries).length>>
+<<for _id, _seen range $run.arc.discoveries>>
+<<set _form = setup.game.forms[_id]>>
+<<sceneImage `'assets/' + _form.art` `_form.name + ' transformation sequence'` `_form.drink + ' · three stages'`>>
+<<if $run.arc.serviceArt && $run.arc.serviceArt[_id]>>
+<<if _id === 'cup'>>
+<<if $run.arc.cupService && $run.arc.cupService.familiar>><<sceneImage "assets/cup-service-theo.png" "Theo drinks tea with Mara as a porcelain cup" "Small Hours · familiar hands">><</if>>
+<<if !$run.arc.cupService || $run.arc.cupService.regulars>><<sceneImage "assets/cup-service.png" "An adult regular drinks tea with Mara as a porcelain cup" "Small Hours · meeting the regulars">><</if>>
+<<elseif ['robot','espresso'].includes(_id)>><<sceneImage `'assets/' + _id + '-service.png'` `'Mara works as ' + _form.name.toLowerCase()` `_form.drink + ' · during service'`>><</if>>
+<</if>>
+<<for _detail range setup.extraFormArt($run, _id)>><<sceneImage `'assets/' + _detail[0]` `_detail[1]` `_detail[2]`>><</for>>
+<</for>>
+<<else>><p>No new forms discovered yet. The house recipes turn up in the course of working here.</p><</if>>
+</div>

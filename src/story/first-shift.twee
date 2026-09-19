@@ -1,0 +1,234 @@
+:: Start
+<div class="eyebrow">CHAPTER ONE <span>·</span> A NEW ROUTINE</div><h1>A room above<br>the coffee shop.</h1>
+<p class="lede">The job comes with a room upstairs.<br>You haven't seen it yet.</p>
+<p>The sign on the window says <em>Second Nature</em>. Beneath it, in much smaller letters: coffee, breakfast, a little room to breathe.</p>
+<p>You have forty-two dollars, a suitcase with one reluctant wheel, and a canvas bag cutting a groove into your shoulder. Your first shift starts in half an hour. The apartment is up there somewhere, above the warm windows.</p>
+<p>Through the glass, a man in a green apron is arguing gently with the grinder. He notices the bags and comes to unlock the door.</p>
+<div class="choices"><<snChoice "Step inside with your bags" "Arrival" "welcome" "The beginning of a new arrangement →">></div>
+
+:: Arrival
+<div class="eyebrow">06:35 <span>·</span> BEFORE OPENING</div><h1>The key has<br>a little weight.</h1>
+<p>Inez slides a brass key across the counter. The enamel tag is shaped like a pear.</p>
+<p>“The hot water takes a minute. Window sticks when it rains. Eighty-eight a shift, tips are yours. We will put the hours in writing after breakfast.”</p>
+<p>You close your hand around the key. Yesterday, this was an offer on the phone. Now there is a door you can unlock.</p>
+<p>“And if I find somewhere else?”</p>
+<p>“Then we help carry your bags downstairs.” She smiles. “Preferably after the lunch rush.”</p>
+<p>Theo takes the canvas bag off your aching shoulder. “She means that. Both parts.” He carries it to the foot of a narrow staircase behind the counter.</p>
+<p>“You've got twenty minutes,” Inez says. “Put your things down. See what you think.”</p>
+<div class="choices"><<snChoice "Carry your bags upstairs" "Apartment" "" "Take a first look at the apartment →">></div>
+
+:: OrderOne
+<div class="eyebrow">ORDER 01 / 03 <span>·</span> THE MORNING REGULAR</div><h1>One thing<br>at a time.</h1><p>The first customer leaves a wet umbrella by the door and looks at the empty spot where his usual barista should be.</p><p>“You're new. No rush.” He glances at the clock immediately afterward.</p><p>Theo nudges the ticket toward you. “An americano is espresso topped with hot water. The milk jug is not involved.”</p><div class="order-ticket"><span class="small-label">TICKET #001</span><h2>Small americano</h2><p>Double espresso · hot water<br><strong>No milk</strong> · to stay</p></div><div class="choices"><<snChoice "Pull a double shot, then add hot water" "AfterOne" "firstCorrect" "Follow the ticket">><<snChoice "Add steamed milk to soften the espresso" "AfterOne" "firstWrong" "Make it gentler">></div>
+
+:: AfterOne
+<div class="eyebrow">07:20 <span>·</span> FINDING A RHYTHM</div><h1>The space<br>between orders.</h1><<if $run.flags.order1 === 'firstCorrect'>><p>The cup lands on its saucer without a rattle. The customer takes a sip, nods, and leaves two dollars by the till.</p><div class="outcome">+$2 in tips · one order down</div><<else>><p>He looks at the pale coffee. “Sorry. Black, please.”</p><p>Your stomach dips. Theo has a fresh cup beside you before the apology is finished. “That's why we read twice.” You remake it. The customer thanks you and takes the new cup.</p><div class="outcome">Order remade · a little more rattled</div><</if>><p>A few minutes later, Theo points out the scribbles on the order pad: circles for takeaway, a star for decaf, a fiercely underlined word when someone really means it.</p><p>“Want me beside you for the next one?”</p><div class="choices"><<snChoice "Ask him to walk you through it" "OrderTwo" "askTheo" "Let someone help">><<snChoice "Try the next ticket on your own" "OrderTwo" "solo" "Take a little room to learn">></div>
+
+:: OrderTwo
+<div class="eyebrow">ORDER 02 / 03 <span>·</span> SMALL INSTRUCTIONS</div><h1>A name on<br>a paper cup.</h1><p>A woman wearing a bicycle helmet orders without taking her gloves off. “Decaf oat latte, please. I have already had my allotted amount of being awake.”</p><<if $run.theo > 0>><p>Theo points to the blue label on the smaller hopper. “Decaf lives here. Oat milk is the carton on the left.” He lets you take it from there.</p><<else>><p>You check the labels: the smaller hopper is marked <strong>DECAF</strong>. The oat milk is on the left. You have time to get this right.</p><</if>><div class="order-ticket"><span class="small-label">TICKET #014</span><h2>Decaf oat latte</h2><p>Decaf espresso · steamed oat milk<br>Takeaway · name: <strong>Robin</strong></p></div><div class="choices"><<snChoice "Use the decaf hopper and oat milk" "Break" "secondCorrect" "Write Robin on the cup">><<snChoice "Use the house espresso and oat milk" "Break" "secondWrong" "Reach for the familiar hopper">></div>
+
+:: Break
+<div class="eyebrow">10:30 <span>·</span> STAFF BREAK</div><h1>Something<br>off-menu.</h1>
+<<if $run.flags.order2 === 'secondCorrect'>><p>Robin salutes you with the cup and leaves three dollars in the jar. By half past ten, your hands know where the clean spoons live.</p><div class="outcome">+$3 in tips · break time</div>
+<<else>><p>Theo notices the hopper before you hand over the cup. You start again with decaf. Robin makes a grateful face. “Thanks for checking.” You check the hopper again after she leaves.</p><</if>>
+<p>In the back room, Inez has left a small cup beside a handwritten card. This menu never goes in the window.</p>
+<div class="special-card"><span class="small-label">TODAY'S OFF-MENU SPECIAL</span><h2>Golden Hour</h2><p>Espresso, warm milk, honey.<br>Orange peel. A softer shape.</p><span class="small-label">FULL-BODY INFUSION · ASK BEFORE TASTING</span></div>
+<p>“What does <em>full-body</em> mean?”</p>
+<p>Theo sets an ordinary coffee beside it. “Living honey. Your whole body, not just your hair. You would still be you. But you'd have to learn how to hold your shape.”</p>
+<p>You wait for him to smile. He doesn't.</p>
+<p>“It usually wears off overnight. Inez can help you hold your shape until then. There isn't a switch to turn it off early.” He pushes neither cup toward you. “The other one is just coffee.”</p>
+<p>The special smells of orange and warm sugar. The idea is ridiculous. You find yourself picturing it anyway: what a hand made of honey would feel like, whether you would still recognize yourself in the mirror upstairs.</p>
+<div class="choices"><<snChoice "Try a cup of Golden Hour" "FirstChange" "taste" "Find out what a different body feels like">><<snChoice "Take the ordinary coffee" "Ordinary" "decline" "Leave the special alone today">></div>
+
+:: FirstChange
+<div class="eyebrow">10:42 <span>·</span> TRANSFORMATION 01 / 03</div><h1>The shape<br>of your hands.</h1>
+<<sceneImage "assets/honey-onset.png" "Mara's hands soften into translucent amber honey, stretching a thin ribbon between her fingertips" "01 · Skin gives way to honey">>
+<p>The honey arrives first, then the orange. You drink slowly, waiting for the extraordinary part to announce itself.</p>
+<p>It starts where your right palm rests against the cup. Warmth spreads through the heel of your hand, and the familiar lines of your skin grow shallow. The color deepens to amber. When you lift your fingers, the afternoon-colored light follows them.</p>
+<p>You let go of the cup too fast. It knocks against its saucer. “No. Wait.” You rub your palm hard against your jeans, trying to wipe the color off. It is still there.</p>
+<p>A patch of wood grain is visible through your palm. You turn it over, expecting the trick to break. It stays there, warped and golden through a depth that should not let you see anything at all.</p>
+<p>You touch the softened hand with your other index finger. A small hollow opens beneath the pressure. Your fingertip sinks a little farther than it should; the edges rise around it in a smooth, glossy rim.</p>
+<p>You jerk your hands apart. There is no sharp pain, which should be reassuring. Instead it makes you feel suddenly sick. You can feel the pressure from both sides. Your brain keeps insisting that a finger cannot go there.</p>
+<p>When you pull away, a ribbon of honey follows. For one absurd second you think you have spilled the drink. Then the ribbon tightens between your fingers, and you feel its whole length.</p>
+<p>The change catches the other palm. Fingernails lose their hard edges. The pads of your fingers spread against the table, still distinctly yours but suddenly negotiable. Small bubbles drift beneath the surface.</p>
+<p>“Theo. Theo, make it stop.” Your voice cracks on his name. You knew the words <em>living honey</em>. You did not know they would mean watching your hands stop being hands.</p>
+<p>He is beside you at once. “I'm getting Inez. Stay with me.” He reaches out, then stops before touching you. “Can you walk to the sink?”</p>
+<div class="choices"><<snChoice "Follow the warmth toward the mirror" "HoneyFace" "spreadHoney" "The change is still moving →">></div>
+
+:: Ordinary
+<div class="eyebrow">10:42 <span>·</span> A FAMILIAR TASTE</div><h1>Just coffee,<br>for now.</h1><p>Theo moves the special aside without comment. The ordinary coffee is hot and a little bitter. Exactly what it claims to be.</p><p>For ten minutes you sit, look out at the back step, and stop being useful to anyone.</p><p>You check your reflection in the dark phone screen anyway. Chestnut hair. The same face. A small crease from concentrating too hard.</p><p>You still want to know what the special would have done. The ordinary coffee is enough for this break.</p><div class="choices"><<snChoice "Ask Theo about the specials" "Theo" "" "You can ask without drinking →">></div>
+
+:: Theo
+<div class="eyebrow">11:15 <span>·</span> THE BACK ROOM</div><h1>How much<br>to say.</h1>
+<<if $run.changed>>
+<p>Theo returns with a clean apron towel. He stops at arm's length, waiting for you to decide whether you want the company.</p>
+<p>“How are you feeling?”</p>
+<<if $run.reaction === 'curious'>><p>“Scared.” You say it before you can tidy it up. “And some of it feels good, and I don't know what to do with that.” Your hands will not stay still.</p><<else>><p>You hold up the photograph. “I keep thinking I'll look down and they'll be normal.” Seeing yourself on the phone has not made it easier to believe.</p><</if>>
+<p>“I can tell you about my first one,” he says. “Different drink, though. I don't know how this feels.”</p>
+<<else>>
+<p>“You said that cup could turn me into honey.”</p><p>Theo nods. “I meant it.”</p>
+<p>You look at the closed stockroom door, at the ordinary people beyond it ordering ordinary coffee. “How is this a place I can just walk into?”</p>
+<p>“Coffee brings most people through the door. Some regulars come for the other menu.” He sets down his cup. “There's a lot I haven't explained.”</p>
+<</if>>
+<div class="choices"><<snChoice "Tell him what you are actually thinking" "OrderThree" "tellTheo" "Tell him what's worrying you">><<snChoice "Keep it practical: you need to finish your shift" "OrderThree" "deflectTheo" "Leave the rest for later">></div>
+
+:: OrderThree
+<div class="eyebrow">ORDER 03 / 03 <span>·</span> THE LAST RUSH</div><h1>Back to<br>the ordinary things.</h1>
+<<if $run.toldTheo>><p>Theo tells you he woke human after his first special. “I checked every finger.” He glances at your hands. “Being told it wears off and believing it are different things.”</p><<else>><p>Theo leaves the conversation where you put it. He makes room beside him at the counter without trying to fill it with advice.</p><</if>>
+<<if $run.changed>>
+<<if $run.formControl === 'steady'>><p>You pause before lifting the tray, settle your fingers into their familiar shape, and bring the cup across the counter. Your outline holds all the way across.</p>
+<<else>><p>Your fingers lengthen a little to fit the cup handle. You catch yourself doing it, almost pull away, then let the new grip work. The cup arrives steadily. Your hand takes its old shape again.</p><</if>>
+<p>The customer looks from your translucent wrist to your face. “First special?”</p>
+<p>You stare at them. Their ordinary tone feels almost worse than a scream.</p><p>“The gold suits you.” They look down at the menu. You grip the tray harder, remember what that does to your fingers, and force yourself to loosen them.</p>
+<<else>><p>You have to repeat an order over the grinder. You raise your voice and try again. This time the customer hears you.</p><</if>>
+<div class="order-ticket"><span class="small-label">TICKET #038</span><h2>Chamomile tea</h2><p>Chamomile · hot water · three-minute steep<br><strong>Honey on the side</strong> · to stay</p></div>
+<p>The customer settles by the window. “I like to decide how sweet.”</p>
+<<if $run.changed>><p>You reach for the jar behind the counter. Ordinary honey. The distinction matters rather more to you now.</p><</if>>
+<div class="choices"><<snChoice "Serve the honey in a little pot" "AfterThree" "thirdCorrect" "Let them add their own">><<snChoice "Stir the honey into the tea" "AfterThree" "thirdWrong" "Save them a step">></div>
+
+:: AfterThree
+<div class="eyebrow">13:30 <span>·</span> WINDING DOWN</div><h1>A shift has<br>a shape.</h1><<if $run.flags.order3 === 'thirdCorrect'>><p>The customer adds barely half a spoonful of honey and spends the next hour reading. Two dollars appear beside the empty pot when they leave.</p><div class="outcome">+$2 in tips · three orders complete</div><<else>><p>“I did ask for it on the side.” Their tone is mild, which somehow makes your face warmer. You brew a fresh cup and bring the little pot.</p><p>This time, you watch them add barely half a spoonful. You put the lid back on the pot.</p><</if>><p>The rush gives way to spoons in the sink, damp rings on tables, and the smell of toast from a plate you forgot to eat.</p><p>Inez wraps the toast in a clean napkin and hands it to you. “First days are longer than other days.”</p><p>The bell over the door rings. Nadia steps inside in her camel coat, hospital badge still clipped to her pocket.</p><div class="choices"><<snChoice "Wave her over" "Nadia" "" "A face from outside the cafe →">></div>
+
+:: Nadia
+<div class="eyebrow">14:00 <span>·</span> SOMEONE WHO KNOWS YOU</div><h1>“Mara?”</h1>
+<<if $run.changed>>
+<p>Nadia stops so abruptly the door swings back against her bag. Her eyes travel from your amber face to the honey ribbons around your clip, then to the light passing through your fingers.</p>
+<p>“What is that?” She takes one step closer. “Mara, what have they put on you?”</p>
+<p>You lift a hand. Its outline wobbles. A fingertip stretches into a thin amber thread before you draw it back.</p><p>Nadia makes a sharp, involuntary sound and catches the nearest chair.</p>
+<p>“It's me.”</p><p>“I can see <em>through</em> you.” She says it very quietly. You can hear the effort it takes to keep her voice there.</p>
+<p>She starts reaching for your wrist, stops, and looks helplessly at her own hand. “Does it hurt? Can you breathe? How are you standing?”</p><p>You can only answer one question at a time.</p>
+<p>She sits because her knees have begun shaking. When you explain that you are not in pain, she nods too quickly and keeps staring at your face.</p>
+<p>“Okay,” she says, without sounding convinced. “Okay. Say something else.”</p><p>You complain that the window upstairs sticks. A breath escapes her, halfway between a laugh and a sob. Hearing something ordinary from you helps. It does not make her stop looking frightened.</p>
+<<else>>
+<p>Nadia says your name with the small relief of finding you somewhere you said you would be.</p>
+<p>“You look like you've been busy. Good busy, or should I help you escape through a window?”</p>
+<p>“The upstairs one sticks.”</p><p>“Ground floor it is.”</p>
+<p>She glances around. “You like it here?” You think of the apartment, the ordinary coffee, and the other cup you left cooling.</p>
+<</if>>
+<div class="choices"><<snChoice "Tell her about the special" "NadiaReply" "tellNadia" "Explain what happened on your break">><<snChoice "Ask to talk about the apartment first" "NadiaReply" "hideNadia" "Start with something easier to explain">></div>
+
+:: NadiaReply
+<div class="eyebrow">14:10 <span>·</span> ROOM FOR AN ANSWER</div><h1>Five minutes<br>with Nadia.</h1>
+<<if $run.toldNadia>><<if $run.changed>>
+<p>You tell her about the cup, the table showing through your hand, the moment you almost spread across the tile. You show her the photos.</p>
+<<if $run.reaction === 'curious'>><p>“And some of it feels good,” you finish. Saying it to her is harder than saying it in the back room.</p><<else>><p>“I still don't know what I think,” you finish. “Please don't ask me yet.”</p><</if>>
+<p>She looks at each photo, then back at the same change moving in front of her. “You drank something and this happened. Today.” Repeating it does not seem to help.</p>
+<p>You know that look: she wants to get your bags and take you somewhere else. She has already picked up her phone when she stops herself.</p>
+<p>“I'm trying not to panic at you,” she says.</p><p>“Could you stay while you do that?”</p><p>“Yes. That bit I can do.” She puts the phone face down, though her hand stays on it.</p>
+<<else>>
+<p>You tell her what Theo said, including the part where you chose the ordinary coffee.</p><p>“That is an extremely strange employee benefit.” She looks at you carefully. “Do you want me to check in after tomorrow's shift?”</p>
+<p>“Yes. Without opening with the escape plan.”</p><p>“I'll put it second.”</p>
+<</if>><<else>>
+<<if $run.changed>><p>“I know you can see it,” you say. “Could we talk about something I understand for five minutes?”</p>
+<p>Nadia looks at the amber hand around your cup. “I don't think I can pretend I haven't seen—” She stops when she sees your expression. “Five minutes. I'll try.”</p>
+<p>She asks whether there is space for your old bookcase. You answer with your hands without thinking. One finger stretches farther than the others; she loses her next question completely. You wait while she finds it again.</p>
+<<else>><p>You tell her about the key and the sticking window. She asks whether there is room for your old bookcase. You can answer that one without having to mention the drinks.</p><</if>>
+<p>“Send me a picture when you've unpacked,” she says. “I want to see where you landed.”</p>
+<</if>>
+<p>At the counter, Inez has your first shift's pay ready. The hours are written down. That part is exactly what she promised.</p>
+<div class="choices"><<snChoice "Clock out and head upstairs" "Closing" "clockOut" "Collect $88 in wages and your tips →">></div>
+
+:: Closing
+<div class="eyebrow">15:00 <span>·</span> YOUR APARTMENT</div><h1>The room<br>is still the same.</h1>
+<p>The key turns cleanly. Your bags are beside the bed, exactly where you dropped them this morning. Below the floorboards, someone laughs, and the grinder starts again.</p>
+<<if $run.roomChoice === 'mug'>><p>Your chipped blue mug waits on the desk, just where you left it.</p><<else>><p>Both bags are still zipped. You sit beside them for a moment before opening the one with your blue mug.</p><</if>>
+<<if $run.changed>>
+<p>The wall mirror is in the same place. This morning you straightened your clip in it with a hand made of ordinary skin.</p>
+<p>Now the brass catches the light inside a sweep of living honey. Your green eyes look back from an amber face. You press one finger to your cheek and watch the hollow close.</p>
+<p>You take the clip out. Without it, the thick ribbons settle against your neck and slowly join along their edges. You separate two of them with a fingertip. They draw together again as soon as your attention moves.</p><p>For a minute you leave them alone. The weight spreading over your shoulders feels good in a way you cannot compare to having hair. Then you catch the mirror again and put the clip back in too quickly.</p>
+<<if $run.formControl === 'steady'>><p>You set your outline carefully before sitting on the bed. It holds, though you can feel the shape asking for your attention.</p><<else>><p>You reach for the mug and let your fingers flow around its handle. The handle fits as easily as it did downstairs. You still aren't used to that.</p><</if>>
+<<if $run.reaction === 'curious'>><p>The silence gives you room to shake. You like parts of this, and you want your hands back. You write both down. Then you leave Nadia's number open on your phone.</p><<else>><p>You take another photo in the plain afternoon light. Inez's answer about reversal keeps coming back to you. You leave the lamp on. Tonight, you need to learn how to rest without being afraid of coming apart.</p><</if>>
+<<else>><p>In the mirror, you look much as you did this morning. More tired. A little less at sea.</p><p>The special is still a question. It can stay a question until tomorrow.</p><</if>>
+<div class="shift-summary"><span class="small-label">FIRST SHIFT COMPLETE</span><div><span>Orders right first time</span><strong><<= $run.correct >> / 3</strong></div><div><span>Wages + tips</span><strong>$<<= 88 + $run.tips >></strong></div><div><span>Deposit fund</span><strong>$<<= $run.cash >> / $900</strong></div></div>
+<p>Your phone lights up. A message from Nadia:</p><div class="dialogue"><span>NADIA</span><p>“Made it home. Your turn.”</p></div><p>You look around the room. Then type: <em>Me too.</em></p>
+<p>By bedtime, the cafe has gone quiet. You leave the lamp on low and your phone within reach.</p>
+<<if $run.changed>><p>Your forearm spreads slightly against the pillow. You pull it up, startled, and a short amber thread follows before drawing back into your wrist. The pillowcase is dry.</p><p>You try again, keeping your eyes on the edge of your arm until it stops moving. Eventually you can feel the boundary without watching it. You fall asleep with your other hand resting there.</p><</if>>
+<div class="choices"><<snChoice "Try to sleep" "Morning" "wakeMorning" "See what the morning brings">></div>
+
+:: Morning
+<div class="eyebrow">TUESDAY · 06:50 <span>·</span> YOUR APARTMENT</div><h1>Your hands.<br>Your own hands.</h1>
+<<if $run.flags.transformed>>
+<p>You wake with your hand trapped beneath your cheek. It has gone numb. For one blank, frightened second, you think something else has changed.</p>
+<p>Then you see the creases across your palm.</p>
+<p>Skin. A pale crescent at each fingernail. You press your thumb into the opposite hand, hard enough to leave a mark. It gives a little and stops. Nothing stretches between your fingers when you pull them apart.</p>
+<p>You sit up too quickly. Touch your face. Drag a lock of chestnut hair across your knuckles. Plant both feet on the floor and keep them there, toes curled against the cold boards.</p>
+<p>The relief comes out as a laugh that breaks in the middle. You stay on the edge of the bed until you can breathe normally.</p>
+<p>The photographs are still on your phone. Yesterday happened. Your body has come back; the memory of feeling it soften has not gone anywhere.</p>
+<<if $run.reaction === 'curious'>><p>You reach for the blue mug and expect your fingers to settle around its handle in that impossible, easy way. They stop where fingers are supposed to stop. A tiny disappointment catches you before you can hide it from yourself.</p><p>You are relieved. Completely relieved. You wish that were the only thing you felt.</p>
+<<else>><p>You pick up the blue mug and put it down again. An ordinary hand doing an ordinary thing. You do it twice more before trusting it.</p><</if>>
+<p>You write beneath yesterday's notes: <em>Human when I woke. 06:50. First cup wore off overnight.</em></p>
+<<else>>
+<p>You wake to the grinder below your floorboards and a crease from the pillow across your palm. The room is unfamiliar for a moment. Then you remember the key.</p>
+<p>The blue mug is on the desk. Your hair has escaped its clip. Your hands look exactly as they did yesterday.</p>
+<p>You chose ordinary coffee. There was nothing to wear off. You still remember the smell of the cup you left behind.</p>
+<p>You are rested enough to ask the questions you couldn't quite organize during the rush.</p>
+<</if>>
+<div class="choices"><<snChoice "Go downstairs with your questions" "MorningRules" "learnSpecials" "Ask about the other menu">></div>
+
+:: MorningRules
+<div class="eyebrow">TUESDAY · 07:10 <span>·</span> BEFORE THE NEXT SHIFT</div><h1>The other<br>reason people come.</h1>
+<<if $run.flags.transformed>><p>Inez looks at your face, then your hands. “Morning.”</p><p>“It's gone.” You turn one palm toward her. “All of it.”</p><p>“The first cup usually fades by morning.” She sets an ordinary coffee on the counter. “I'm glad you slept.”</p><p>You don't tell her how often you woke to check.</p>
+<<else>><p>Inez sets an ordinary coffee on the counter. You look past it to the little handwritten menu she is taking out of a drawer.</p><p>“Those drinks really change people?”</p><p>“They do. Usually for the rest of the day.” She leaves the menu where you can read it.</p><</if>>
+<p>“Is that what this place is?”</p>
+<p>“It's a cafe. It also gives people a little time in another shape.” She glances toward the still-locked front door. “The regulars who know ask for the specials. They bring someone they trust. We don't put that part on the sign.”</p>
+<<if $run.flags.transformed>><p>You think of the customer who asked whether it was your first special. They must have known what you'd been drinking.</p><<else>><p>You think of the customers who greeted Inez by name and never needed to study the menu. You wonder how many came for something you hadn't known to offer.</p><</if>>
+<p>“And everyone changes back?”</p>
+<p>“The specials wear off. The timing isn't always the same.” Inez opens a small ledger beside the menu. “For some people, after more visits, a change starts lasting longer. Past breakfast. Sometimes into the next day. We keep a record.”</p>
+<p>“So <em>overnight</em> isn't a promise.”</p><p>“No.” This time she doesn't soften the answer.</p>
+<<if $run.flags.transformed>><p>Your first entry has a beginning and an end now. Ten forty-two yesterday. Human again by six fifty. You want the next entry to have an end you can count on. You notice that you have already called it <em>the next entry</em>.</p>
+<<else>><p>You read the menu without reaching for it. You haven't finished your ordinary coffee.</p><</if>>
+<p>Inez closes the recipe book when the delivery bell rings. She brings you the invoice instead.</p><p>“Would you check this against what arrived? Tell me if anything looks wrong.”</p><p>You expected another explanation. She has given you a pencil.</p>
+<div class="choices"><<snChoice "Begin the next shift" "OtherShift" "startOtherMenu" "Chapter two · the other menu">></div>
+
+
+:: Apartment
+<div class="eyebrow">06:40 <span>·</span> YOUR NEW APARTMENT</div><h1>Somewhere<br>to put things.</h1>
+<<sceneImage "assets/apartment-arrival.png" "Mara sets down a suitcase and canvas bag in a small furnished studio above the cafe" "Before the shift · a room of your own">>
+<p>The suitcase catches on the last stair. You give it one stubborn pull, stumble through the doorway, and let both bags land beside the bed.</p>
+<p>The relief in your shoulder arrives before anything else.</p>
+<p>It is one main room: a narrow bed under the window, a desk with a brass lamp, a kitchenette barely wider than its sink. There is a little bathroom through a door that closes all the way. Someone has left a few books and plants. A sage blanket is folded squarely across the bed.</p>
+<p>You turn the key from the inside, just to hear the lock work. Then unlock it again.</p>
+<p>The room smells faintly of clean linen and yesterday's coffee. Below your feet, the grinder starts. The sound comes through the boards softened into something almost domestic.</p>
+<p>You unzip the canvas bag and take out your chipped blue mug. You have carried it through three addresses. It looks at home on the desk. You aren't sure you do yet.</p>
+<p>In the wall mirror: chestnut hair tangled at the ends, the brass clip sitting crooked, a face you know too well in unfamiliar light. You straighten the clip. Your fingers leave a brief warm mark on your cheek.</p>
+<p>There will be time to unpack after work. For now, you can choose one small thing.</p>
+<div class="choices"><<snChoice "Leave your blue mug on the desk" "OrderOne" "unpackMug" "Let the room begin to feel like yours">><<snChoice "Put the mug away and leave both bags packed" "OrderOne" "keepPacked" "You are not ready to settle in yet">></div>
+
+:: HoneyFace
+<div class="eyebrow">10:44 <span>·</span> TRANSFORMATION 02 / 03</div><h1>A face you know.<br>A substance you don't.</h1>
+<<sceneImage "assets/honey-spreading.png" "Mara watches the honey transformation spread across her face, neck and hair in the back-room mirror" "02 · The change reaches your reflection">>
+<p>The gold climbs unevenly. One forearm is already clear amber; the other still has a strip of ordinary skin above the wrist. You watch that last familiar patch narrow as warmth passes through it.</p>
+<p>In the mirror, the change reaches one side of your jaw. Your cheek becomes glossy, then translucent at its edge. The freckles remain, tiny dark specks suspended just beneath the surface.</p>
+<p>You press one finger against your cheek. It leaves a deeper hollow than skin would allow. You lift it away and watch the surface draw smooth again.</p>
+<p>Your hair begins to move without you.</p>
+<p>Fine chestnut strands thicken and gather together. Individual hairs disappear into broad amber ribbons. Their ends lengthen under their own weight, rounding into drops that hang for a moment before pulling back up. The brass clip stays stubbornly brass, caught in something that is no longer hair.</p>
+<p>You bare your teeth at the mirror, checking that they are still where you expect. The woman staring back looks terrified. Her left cheek is still human; the right holds the light like honey in a jar.</p>
+<p>“That's my face.” You say it twice. “How do I change it back?”</p><p>Theo has no quick answer. The silence makes your throat tighten. You search the mirror for a patch the change has missed.</p>
+<p>Your voice has a new rounded resonance. You can feel the sound moving through your softened throat, a faint vibration that spreads farther than it used to.</p>
+<p>The last ordinary color crosses your mouth and disappears. The warmth moves down beneath your shirt. Your apron knot presses into you with startling clarity. For the first time, your body's outline feels like something you are actively doing.</p>
+<div class="choices"><<snChoice "Hold the counter as the change finishes" "HoneyBody" "becomeHoney" "Find out what is left of familiar rules →">></div>
+
+:: HoneyBody
+<div class="eyebrow">10:47 <span>·</span> TRANSFORMATION 03 / 03</div><h1>All the way<br>to honey.</h1>
+<<sceneImage "assets/honey-settled.png" "Mara's complete honey slime form, fully clothed, standing in a small connected amber puddle as she learns to hold her shape" "03 · A whole body made of living honey">>
+<p>Your knees soften. A sharp, frightened sound gets out before you can stop it. You grab the table; your hand spreads across the edge instead of closing around it. For one horrible second you think you are going to pour onto the floor.</p>
+<p>Your height slips. Your shirt settles lower at the shoulders. Then you think <em>stand up</em>, and your outline rises back into it.</p>
+<p>Theo brings a chair. You sit long enough to work your shoes off. Your feet emerge with their shape intact, but the toes blur when they meet the cool tile. Honey spreads in a shallow rim around them.</p>
+<p>“Those are my feet.” You keep staring. “I need them to be feet.” You can feel the outer edge of that little pool as clearly as your hands. You want to pull away from it, but there is nowhere to pull away to.</p>
+<p>When you stand again, your jeans and apron hang from the same familiar shape. Everything holding them up has changed. Your weight shifts in a slow internal wave; the rest of you catches up a fraction after you move.</p>
+<p>A drop stretches from your elbow. You stare at it and think, with sudden unreasonable firmness, <em>come back</em>. It shortens, climbs, and smooths into your arm.</p>
+<p>You do it again with a fingertip. Flatten it. Pull it long. Remember its old outline and let it return.</p>
+<p>For a breath, the effort eases. Your aching shoulder is quiet. The stretch through your fingers feels warm and oddly good. You catch yourself wanting to try it again and recoil from that almost as hard as from the change itself.</p><p><em>I can't be enjoying this. I'm trying to get my body back.</em></p>
+<p>Inez appears at the doorway. She looks at your face before the little pool on the floor.</p>
+<p>“Change me back,” you say before she can speak.</p><p>“It has to wear off. Usually by morning.” Inez's expression loses its practiced calm. “I should have made the waiting clearer. Right now I can help you stay together.”</p>
+<p>You are angry enough to cry. You are afraid that crying will do something else you don't understand. Under all of that, the warmth in your hands still feels pleasant. You wish it would pick a side.</p>
+<div class="choices"><<snChoice "Admit that liking it frightens you" "HoldShape" "curious" "Tell Inez about the warmth in your hands">><<snChoice "Ask for a minute and photograph the change" "HoldShape" "uneasy" "You need a record, and time to think">></div>
+
+:: HoldShape
+<div class="eyebrow">11:00 <span>·</span> LEARNING YOUR EDGES</div><h1>How to<br>stay together.</h1>
+<p>Inez puts an empty cup on the table. “A small thing first. Don't think about everything at once.”</p>
+<p>Your fingers meet around the handle and briefly merge. You snatch your hand back. Inez waits while you count them apart again. Five. You check twice.</p>
+<p>“Like that.” She shifts the cup a little closer. “You can hold a familiar shape, or find one that works differently. Either takes practice.”</p>
+<<if $run.reaction === 'curious'>><p>Part of you wants to try the second option. The rest wants a door out of this body. You ask Theo to stay where you can see him before trying anything.</p>
+<<else>><p>You keep the photograph open beside the cup. It reassures you that there is a record, even though the picture does not capture how fluid your balance feels.</p><</if>>
+<p>Theo covers the counter while you practice. No one tries to hurry the first successful step back into your shoes.</p>
+<div class="choices"><<snChoice "Practice holding a steady, familiar shape" "Theo" "steadyForm" "Separate fingers. Even steps. A reliable outline.">><<snChoice "Experiment with your new flexibility" "Theo" "exploreForm" "Stretch around the handle, then draw yourself back">></div>

@@ -1,0 +1,121 @@
+:: BodyCheck
+<div class="eyebrow">BEFORE WORK <span>·</span> A MOMENT TO YOURSELF</div><h1>Give me a minute.</h1>
+<p>Theo puts the order pad down. “Of course.”</p>
+<<switch $run.arc.visit.form>>
+<<case 'robot'>>
+<p>You hold your hand up to the light. The glaze has a faint ivory depth at each edge. You can see the seam that divides your palm into plates, but you cannot decide where the skin beneath it is supposed to have gone.</p>
+<p>Your fingers are still arranged like fingers. That made this seem manageable a minute ago. Now you want to find something under the porcelain that feels familiar.</p>
+<<case 'cup'>>
+<p>The empty chair beside the table bothers you. A minute ago, sitting down meant choosing where to put your weight. Now you have to ask for the saucer to be moved.</p>
+<p>Theo sits well back, leaving his hands in his lap. You can hear a faint ringing after each word he says. It takes you a moment to realize the ringing is inside you.</p>
+<<case 'espresso'>>
+<p>A bead of water runs down your green casing. You follow it by touch until it reaches the edge of the tray. You want to wipe it away. The wanting is so ordinary that you briefly forget there is a problem.</p>
+<p>Then you try to move.</p>
+<p>Theo is beside the workbench, waiting. You can ask for help, or try the small set of movements you still have. You wish either option felt less like admitting what has happened.</p>
+<<case 'moth'>>
+<p>The brass clip has slipped a little. You reach to straighten it and open one wing instead. Its tip scrapes the notebook with a noise you feel along the whole crease.</p>
+<p>You stop. Close the wing. Try to remember what reaching used to involve.</p>
+<p>Theo sets a pencil beside the notebook. The worn paint has little ridges in it. From here, you could climb them.</p>
+<<case 'shadow'>>
+<p>The empty chair stands a few inches from the wall. You have sat in it before; you remember which leg rocks. You could be sitting there now, except your entire body is spread across the brick behind it.</p>
+<p>You turn what used to be your palm toward yourself. The bricks show through. Your fingers have no back and front.</p>
+<</switch>>
+<div class="choices"><<snChoice "Try something your old body knew" "BodyCheckResult" "reflectHabit" "Follow the familiar impulse">><<snChoice "Pay attention to what you can feel now" "BodyCheckResult" "reflectSense" "One small experiment">></div>
+
+:: BodyCheckResult
+<div class="eyebrow">BEFORE WORK <span>·</span> A SMALL EXPERIMENT</div><h1><<if $run.arc.visit.reflection === 'habit'>>You expect it to be there.<<else>>There. You can feel that.<</if>></h1>
+<<switch $run.arc.visit.form>>
+<<case 'robot'>>
+<<if $run.arc.visit.reflection === 'habit'>>
+<p>You put two fingers against the side of your throat. They find a curved plate, a seam, the little hollow beneath your jaw.</p>
+<p>No pulse.</p>
+<p>You press harder. The pressure becomes very clear; the absence beneath it does not change. Your other hand closes so sharply that the joints click.</p>
+<p>“I can't find it.”</p>
+<p>Theo pulls a chair over. “You won't have one like that right now.”</p>
+<p>You knew that. Hearing him say it makes you shake your head anyway. You keep your fingers there while he sits down, waiting for a single beat to contradict him.</p>
+<p>Eventually you lower your hand. “Stay there a bit.”</p>
+<<else>>
+<p>You press your left index finger into your right palm. The contact arrives as a small, perfectly bounded circle. Press harder and it widens. You can tell exactly when one porcelain surface begins sliding over the other.</p>
+<p>It should feel dull through something this hard. Instead you can feel the tiny ridge around the fingertip plate. You rub it across your palm twice before catching yourself.</p>
+<p>Your body suggests the shortest route for lowering your hands. You take a slow, untidy curve instead, holding one elbow too high.</p>
+<p>Nothing corrects you. The awkward angle feels almost as good as the smooth movement did.</p>
+<p>“What are you doing?” Theo asks.</p>
+<p>“Being inefficient.” You keep your elbow there another second.</p>
+<</if>>
+<<case 'cup'>>
+<<if $run.arc.visit.reflection === 'habit'>>
+<p>The door clicks behind you. You try to glance over your shoulder.</p>
+<p>Your view stays where it is. The effort travels around your rim and tips you just far enough for the saucer to knock against your base. You settle flat with a frightened little chime.</p>
+<p>“Turn me around. Please.”</p>
+<p>Theo turns the saucer by its edge. The whole room sweeps past. You ask him to stop before the door reaches the center of your view.</p>
+<p>“Too far?”</p>
+<p>“Too fast.”</p>
+<p>He waits, then moves it a few inches at a time. You choose an angle where you can see the door and most of the table. Only then do you notice how hard you have been trying to brace knees you no longer have.</p>
+<<else>>
+<p>You say your own name quietly. The last sound stays in the bowl after you stop speaking. You try humming and feel the note travel all the way around your rim.</p>
+<p>“A little water,” you ask. “Just a spoonful.”</p>
+<p>Theo lowers the spoon close before pouring. A shallow patch of warmth covers your base. You hum again. The note is lower, with a faint shiver where the water meets the glaze.</p>
+<p>You hadn't expected such a small amount to feel like much. Now you can think of almost nothing else. When Theo asks if you want more, you hesitate long enough for him to set the spoon down.</p>
+<p>“Empty first.”</p>
+<p>He tips you over a bowl. The warmth slides up one side and leaves. You ask to stay empty while you work out whether you miss it.</p>
+<</if>>
+<<case 'espresso'>>
+<<if $run.arc.visit.reflection === 'habit'>>
+<p>You try to reach for the towel. Your steam wand turns a little toward it.</p>
+<p>You try again, concentrating on fingers closing around cloth. The same joint shifts. There is no hand waiting at the end of the movement.</p>
+<p>“Could you wipe that drop off?” you ask.</p>
+<p>Theo shows you the folded towel before bringing it against the casing. The cloth crosses an area you still half expect to be your stomach. You feel each change of direction through the enamel.</p>
+<p>It is unexpectedly pleasant. Then he reaches around your side, out of sight, and you ask him to stop.</p>
+<p>“Front only. I can't see what you're doing.”</p>
+<p>He brings the towel back into view. You let him finish there and ask him to leave it on the tray. Having it within reach is a ridiculous comfort when you still cannot pick it up.</p>
+<<else>>
+<p>You find the closed valve by trying to describe it to yourself. A narrow place beneath the warm core. A slight tension when you attend to it. Nothing like a hand, though moving it begins with the same decision.</p>
+<p>Theo sets a bowl beneath the group head.</p>
+<p>You open the valve a little. Water threads into the bowl, and the falling level inside you feels as distinct as a held breath finally leaving. You close it before the thread becomes a stream.</p>
+<p>One last drop hangs beneath you. You wait for it to fall.</p>
+<p>“That was all me,” you say.</p>
+<p>You are pleased enough to want another try. You are frightened enough to turn the heater off first. The valve stays closed, quiet but still easy to find.</p>
+<</if>>
+<<case 'moth'>>
+<<if $run.arc.visit.reflection === 'habit'>>
+<p>You lean sideways to catch the clip with a folded foot. Its weight follows you. The edge of the notebook rises abruptly into view.</p>
+<p>“Oh—wait—”</p>
+<p>Theo rolls the pencil close. You hook a foot over it and pull yourself level. For a moment you hold on with every fold braced.</p>
+<p>The clip used to be something you could forget you were wearing. Now it has almost tipped you off a book.</p>
+<p>You ask Theo to nudge it straight while you hold the pencil. He uses the blunt end of a clean brush. The small adjustment travels down your pleated back; your wings ease into balance.</p>
+<p>“Better?”</p>
+<p>“Yes.” You don't let go of the pencil yet.</p>
+<<else>>
+<p>You lift one wing just clear of the notebook. Air slips underneath. The sensation runs along its edge, then inward across the folds, too broad to be a touch and too precise to be a breeze on skin.</p>
+<p>Theo shifts in his chair. You feel the disturbance coming before it reaches you.</p>
+<p>You lower the wing a fraction. The air passes over it. Your feet stay where they are.</p>
+<p>You do it again when he leans forward. This time the adjustment comes without thought. A tiny thrill travels through the long crease along your back.</p>
+<p>“Could you do that once more?” you ask.</p>
+<p>He leans away, then toward you. You balance through the little current, absurdly pleased, until you notice how much effort he is making to move gently.</p>
+<</if>>
+<<case 'shadow'>>
+<<if $run.arc.visit.reflection === 'habit'>>
+<p>You reach toward the chair. Your hand slides over the brick behind it.</p>
+<p>You push harder. The outline lengthens toward the seat, but it cannot leave the wall. There is no pressure to push against, no ache to tell you that you are trying. The hand simply stays flat.</p>
+<p>You bring it back very slowly.</p>
+<p>“I used to be able to do that.”</p>
+<p>Theo looks at the chair. “Do you want it closer?”</p>
+<p>You nearly say yes. Instead you follow the mortar down to the skirting board, then spread a fingertip across the lit floor. The chair leg meets it there. You can climb along the wood where the lamp reaches.</p>
+<p>It takes you a full minute to get one hand onto the seat. You leave it there while the rest of you stays on the wall.</p>
+<<else>>
+<p>You spread your palm across a mortar line. The shallow hollow passes through your hand without dividing it. You can feel the sandy places, a chipped edge, a smoother patch left by someone's thumb years ago.</p>
+<p>You widen your hand. The details separate, becoming easier to distinguish. You had expected the stretch to hurt. It feels like opening cramped fingers.</p>
+<p>For a moment you want to spread across the whole wall.</p>
+<p>Then a person passes the doorway and the light shifts. The edge of your wrist pulls sideways. You contract so fast that your outline shudders.</p>
+<p>The lamp itself hasn't moved. You check the tape beneath its foot anyway, then spread your hand again, only a little this time.</p>
+<</if>>
+<</switch>>
+<div class="choices">
+<<switch $run.arc.visit.form>>
+<<case 'robot'>><<snChoice "Decide how to use these hands" "RobotBody" "" "Return to the tray">>
+<<case 'cup'>><<snChoice "Talk through the first session" "CupBody" "" "Tell Theo what you need">>
+<<case 'espresso'>><<snChoice "Talk through the first shot" "EspressoBody" "" "Choose how to begin">>
+<<case 'moth'>><<snChoice "Decide what to try at the desk" "MothBody" "" "Keep the pencil nearby">>
+<<case 'shadow'>><<snChoice "Find your place beside the counter" "ShadowBody" "" "Keep the lamp on its mark">>
+<</switch>>
+</div>

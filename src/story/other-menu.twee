@@ -1,0 +1,235 @@
+:: OtherShift
+<div class="eyebrow">CHAPTER TWO <span>·</span> SHIFT <<= $run.arc.visit.number >> / 5</div><h1>A different kind of regular.</h1>
+<<if $run.arc.completed === 0>>
+<p>You put on the apron before deciding anything about the drinks. The knot behind your back takes two tries, as usual.</p>
+<p>Inez has left the milk delivery and its invoice beside the till. When you ask where to put them, she asks you to check the quantities first.</p>
+<p>One carton is missing. You show her. “What would you write on the receipt?” she asks, keeping her pen in her pocket until you answer.</p>
+<p>You expected her to tell you where the milk goes. She is still waiting for your answer about the receipt.</p>
+<<elseif $run.arc.completed === 1>>
+<p>After a day away, you recognize the sounds of opening before you reach the counter.</p>
+<p>Theo has put your name on the rota in ink. There is no form beside it.</p><p>“Seemed unnecessary,” he says, when he catches you looking.</p>
+<p>Before opening, Inez asks why Len always sits at the little table by the window. You guess at the light. “Watch what she does when she arrives,” Inez says. “Then tell me.”</p>
+<<elseif $run.arc.completed === 2>>
+<p>A customer starts to ask what you will be today, then catches your expression and changes it to how you are.</p><p>“Still working that out,” you say. It is the first honest answer of the morning.</p>
+<p>Inez's recovery ledger now has a loose sheet headed <em>Mara's notes</em>. You ask her to stop calling them observations and write <em>my account</em> instead. She crosses out the heading.</p>
+<p>When the supplier calls about a late delivery, she puts him on speaker. Afterward, she asks what you would have done. She waits through your first uncertain answer instead of supplying hers.</p>
+<<elseif $run.arc.completed === 3>>
+<p>You count your savings before going downstairs. Still short of the deposit, but you could leave if you had somewhere to stay.</p>
+<p>Nadia has sent a picture of her spare room. Boxes occupy half of it. <em>We could move these. You can have it for a week if you need it.</em></p>
+<p>You save the picture. The cafe feels different with another possible place to sleep in your phone.</p>
+<p>Inez asks you to estimate tomorrow's pastry order from the last few receipts. You give her a number, then start explaining why it might be wrong. She has already written it in the book.</p>
+<<else>>
+<p>Five shifts was the trial period you agreed with Inez. This is the fifth. After the next recovery day, you will talk about whether there is a sixth.</p>
+<p>Theo catches you studying the door. “You can like something here and still leave.”</p><p>“Can I be frightened of it and stay?”</p><p>He takes a moment. “I think that's a harder conversation. But yes.”</p>
+<p>Inez lets you arrange the counter while she stands in the doorway with her coffee. You move the takeaway lids. She notices and leaves them where you put them.</p>
+<</if>>
+<<include "AfterHoursCallback">>
+<p>The morning fills with smaller demands: toast, change for a twenty, a complaint about the rain. By ten-thirty, you have almost stopped watching every cup.</p>
+<div class="choices"><<snChoice "Go help Theo at the counter" "OtherMenu" "partnerTheo" "Get back into the rhythm">><<snChoice "Stay with Inez and the morning book" "OtherMenu" "partnerInez" "See what she wants you to notice">></div>
+
+:: OtherMenu
+<<set _encounter = setup.game.encounter($run)>>
+<div class="eyebrow">10:30 <span>·</span> BETWEEN ORDERS</div>
+<<switch _encounter>>
+<<case 'robot'>>
+<h1>A spare pair of hands.</h1>
+<p>The tray rattles when you put it down. Four customers ordered at once; your hands have kept moving after your thoughts fell behind.</p>
+<p>Theo takes two cups off the tray. “You can slow down. They can survive another minute without coffee.”</p>
+<p>He goes to the back room and returns with something pale in a thick little mug. Toasted sugar, cream, an oddly clean metallic scent.</p>
+<p>“I make this when the room won't stop moving,” he says. “Clockwork Cream.”</p>
+<p>“One of those?”</p><p>“Yes. It changes more than your mood.” He sets it beside your untouched ordinary coffee. “No reason you have to.”</p>
+<p>You turn the mug a fraction. The spoon rings against it, a small, exact note. For some reason you cannot quite leave the sound alone.</p>
+<<case 'cup'>>
+<h1>Len's quiet corner.</h1>
+<p>Len arrives carrying three shopping bags and sits without opening the menu. For a minute she simply looks out of the window.</p>
+<p>Inez prepares a little pot, but brings it to your end of the counter first. “She comes for twenty minutes when nobody can ask her to do anything.”</p>
+<p>“Must be nice.”</p><p>“Sometimes.” Inez puts down a small tasting cup. It smells of black tea and toasted rice. “Small Hours. She thought you might be curious.”</p>
+<p>You glance over. Len raises a hand, then goes back to the window. She doesn't wait to see whether you drink.</p>
+<p>“A special?”</p><p>Inez nods. “The room becomes rather larger. Take your time with that idea.”</p>
+<<case 'espresso'>>
+<h1>The machine has opinions.</h1>
+<p>The old espresso machine gives a sharp metallic complaint. Theo switches to its second group head with the exhausted familiarity of someone working around a bad knee.</p>
+<p>Inez lets you listen before explaining the pressure fault. “What would you do if it stopped completely?”</p>
+<p>“Tell people we're making tea?”</p><p>“A perfectly good answer.” She actually writes it down.</p>
+<p>Then she opens the narrow cupboard beneath the counter and mixes a dark, smoky drink. You have watched her make dozens of coffees. You have never seen that jar before.</p>
+<p>“House Pressure. An old house recipe.”</p><p>“That sounds like a joke at my expense.”</p><p>One corner of her mouth moves. “It gives you a different understanding of this end of the business.”</p>
+<p>You know what the little unmarked jar means now. It still does not tell you what to expect from the cup.</p>
+<<case 'moth'>>
+<h1>A note in the tea tin.</h1>
+<p>The afternoon delivery includes a tea tin wrapped in brown paper. A small moth folded from a receipt is caught beneath the string.</p>
+<p>You lift it carefully. There is no message. Just wings made by someone with patience and a few spare minutes.</p>
+<p>“An old customer's habit,” Inez says. She asks you to check the delivery before opening the tin.</p>
+<p>The brew smells of cedar and the inside of a bookshop. Theo sets a cup near your elbow while you straighten the torn wrapping paper.</p>
+<p>“Margin Tea. It makes that name quite literal.”</p><p>You look from the cup to the little folded moth. “This isn't just tea, is it?”</p><p>“No.” He waits beside the counter. You put the paper moth somewhere it cannot blow away.</p>
+<<case 'shadow'>>
+<h1>When the sign goes dark.</h1>
+<p>The bulbs above the window flicker out. The rest of the cafe carries on glowing, which somehow makes the dark patch more noticeable.</p>
+<p>Inez finds a spare lamp while you check the breaker labels. One label is in a hand unlike hers; a newer correction is written beneath it.</p>
+<p>“Who wrote the first one?”</p><p>“The woman I learned from.” Inez hands you the lamp before you can ask another question.</p>
+<p>When you return, there is a cup of almost-black coffee beside the wall. Its shadow seems a shade too deep.</p>
+<p>“Afterimage,” Inez says. “We used to make it after closing, when the room was quiet enough to notice.”</p>
+<p>You have seen enough house recipes to recognize an invitation. Your shadow reaches the cup a moment before you do. You take your hand back, uncertain whether it really moved.</p>
+<</switch>>
+<<if $run.arc.history.length > 0>><p>You remember the <<= $run.arc.history[$run.arc.history.length - 1].hours >> hours the last special took to leave you. You hesitate before reaching for the cup.</p><</if>>
+<<if $run.arc.visit.partner === 'inez'>><p>Inez stays within earshot, working through a receipt. You cannot tell whether she is waiting for a question or giving you time to find one.</p><<else>><p>Theo stays at your end of the counter, polishing a cup that was already clean.</p><</if>>
+<div class="choices">
+<<switch _encounter>>
+<<case 'robot'>><<snChoice "Try the drink Theo brought over" "RobotChange" "chooseRobot" "Follow the unfamiliar scent">>
+<<case 'cup'>><<snChoice "Taste what Len sent over" "CupChange" "chooseCup" "Accept the small invitation">>
+<<case 'espresso'>><<snChoice "Try Inez's old house recipe" "EspressoChange" "chooseEspresso" "Find out what she means">>
+<<case 'moth'>><<snChoice "Take a sip beside the little paper moth" "MothChange" "chooseMoth" "See where the strange delivery leads">>
+<<case 'shadow'>><<snChoice "Lift the dark cup into the lamplight" "ShadowChange" "chooseShadow" "Follow the movement you almost saw">>
+<</switch>>
+<<snChoice "Stay with your ordinary coffee" "OrdinaryOther" "ordinaryShift" "There is still a shift to finish">>
+</div>
+
+:: OtherAfterWork
+<div class="eyebrow">13:40 <span>·</span> AFTER THE SESSION</div><h1>After the last order.</h1>
+<<if $run.arc.visit.service === 'try'>><p>Twelve tasks. You count them again, remembering where you hesitated and when you stopped needing help.</p><<else>><p>Four tasks, then the pause you asked for. Theo finishes the rush while you rest.</p><</if>>
+<<switch $run.arc.visit.form>>
+<<case 'robot'>><p>Your hands complete the motion of folding a towel after you put it down. The empty gesture frightens you more than the brass knuckles did. You interrupt the next cycle halfway through.</p><p>Nothing breaks. You still want to finish folding the towel, but you can leave it.</p><p>You make a deliberately crooked fold. A small, stupid act. You are almost angry at how relieved it makes you.</p>
+<<case 'cup'>><p>Empty again, you retain a slowly fading ring of warmth. The room sounds larger through your bowl. You had not expected to miss being held; admitting it makes you want to hide behind the sugar jar.</p><p>“I liked the warmth,” you say. Your voice rings thinly. “I did not like being discussed over.”</p><p>Theo writes both sentences down. He keeps them as two separate notes.</p>
+<<case 'espresso'>><p>The last cup leaves your tray. You shut the valve yourself. Pressure settles, then the heater clicks off and an enormous interior quiet opens where the queue used to be.</p><p>You almost start another cycle, though the ticket rail is empty. You catch yourself waiting for someone to put a cup down.</p><p>“Talk to me for a minute,” you say through the grille. “About something I can't make.”</p><p>Theo tells you about a film he hated. For once, his inability to get to the point is exactly what you need.</p>
+<<case 'moth'>><p>A crease in your left wing has softened with use. Inez offers a dry paintbrush to smooth it, then waits for your answer.</p><p>You ask her to show you the brush first. The bristles look enormous. She holds them where you can see them, without laughing.</p>
+<<case 'shadow'>><p>The lamp moves back to its mark. Your outline stops stretching. You had felt the whole cafe through brick and floorboards; now the quiet patch behind the till feels almost private.</p><p>You catch yourself making your silhouette narrower when someone looks over. The old habit has survived the loss of a body. That feels unfair.</p>
+<</switch>>
+<p><<if $run.arc.visit.partner === 'inez'>>Inez stays beside you while you dictate a correction to the ledger. “Don't write <em>comfortable</em>. I said I could concentrate again.” She changes the word.<<else>>Theo asks which part he should remember for next time. You are grateful he doesn't assume there has to be one.<</if>></p>
+<p>Your phone lights up with Nadia's name. She has finished work early. There is time for her to come by, if you want to be seen like this.</p>
+<div class="choices"><<snChoice "Ask Nadia to come and see you" "OtherFriend" "inviteNadia" "Let someone outside the cafe in">><<snChoice "Keep this afternoon for your own notes" "OtherFriend" "privateNotes" "Send a brief reply and take your time">></div>
+
+:: OrdinaryOther
+<div class="eyebrow">11:00 <span>·</span> AN ORDINARY SHIFT</div><h1>Your hands, at work.</h1>
+<p>Ordinary coffee tastes faintly disappointing until you notice how much that bothers you. You drink it anyway.</p><p>Your fingers stay fingers. By the time the lunch queue reaches the door, you've stopped checking them.</p>
+<p>A regular asks whether Inez has been trying out an old recipe again. “I'm making your sandwich,” you say. Theo turns away to conceal a smile.</p>
+<p>Between orders, you notice the unglamorous work that makes the other menu possible: dry shelves, clear labels, an extra chair, someone who remembers to ask before moving another person.</p>
+<div class="choices"><<snChoice "Help Theo prepare the recovery corner" "OrdinaryDebrief" "ordinaryCare" "Make the room easier for the next person">><<snChoice "Ask Inez to explain the old ledger" "OrdinaryDebrief" "ordinaryQuestion" "Learn what the records leave out">></div>
+
+:: OrdinaryDebrief
+<div class="eyebrow">13:40 <span>·</span> THE SAME WAGE</div><h1>Getting the room ready.</h1>
+<<if $run.arc.visit.service === 'care'>><p>You move a lamp, add a folded towel beside the dry shelf, and put a pencil within reach of someone who might not have hands. Theo tests the bell from the back of the room.</p><p>“I used to think being good at this meant being unshockable,” he says. “Mostly it means remembering where the towels are.”</p>
+<<else>><p>Inez shows you the early ledger. It has recipes and times, but almost nothing about how anyone felt.</p><p>“These look like equipment records,” you say.</p><p>“Some of them were written that way.” She does not defend the pages. “Help me change what goes in the next one.”</p><</if>>
+<p>You served twelve customers and earned six dollars in shared tips. The wages are the same as on a special day.</p>
+<div class="choices"><<snChoice "Invite Nadia after work" "OtherFriend" "inviteNadia" "A familiar conversation">><<snChoice "Spend a little time alone" "OtherFriend" "privateNotes" "Think before explaining">></div>
+
+:: OtherFriend
+<div class="eyebrow">14:10 <span>·</span> A PERSON WHO KNOWS YOUR NAME</div><h1>Still a conversation.</h1>
+<<if $run.arc.visit.friend === 'visit'>>
+<<if $run.arc.visit.form === 'human'>>
+<p>She finds you at the same table, looking much as you did before this job. Her glance catches on your hands before she sits down. You let the conversation begin with lunch.</p>
+<<elseif $run.arc.visit.nadiaRepeat>>
+<p>You told her what to look for this time. She finds you at once, then stops with the same brief stiffness in her shoulders.</p>
+<p>“I remember,” she says, when you start explaining. “Seeing it twice doesn't make it ordinary.”</p>
+<p>She pulls up a chair and puts her bag down deliberately. “Same voice. Same you. Give me a second for the rest.”</p>
+<p>You wait. This time she catches herself staring and asks how the afternoon went before you have to ask her to.</p>
+<<else>>
+<p>Your message said the special had been strange. When Nadia comes through the door, you wish you'd explained more.</p>
+<<switch $run.arc.visit.form>>
+<<case 'cup'>>
+<p>She checks your usual table, then the stairs. “Where is she?”</p><p>“Here.” Your voice rings from beside the sugar jar.</p>
+<p>Nadia looks at the cup. Looks behind it. When your little porcelain face moves, her bag slips off her shoulder and hits the floor.</p><p>“No. Mara?” She leans close, then recoils so quickly the chair scrapes. “Where's the rest of you?”</p>
+<p>“There isn't a rest. Right now.”</p><p>She covers her mouth. You can hear her trying to decide which question can possibly come first.</p>
+<p>“You're actually—” Her eyes follow the handle, the tea ring inside you. “Have people been drinking out of you?”</p><p>You tell her. She looks at Theo, then back at your face, as though she has to keep locating you.</p>
+<p>It takes several minutes before she can crouch beside the table without flinching when you speak. When you ask her to lift the saucer, she says, “I need both hands. Mine are shaking.”</p>
+<<case 'espresso'>>
+<p>She walks past you once. “Mara upstairs?”</p><p>You say her name through the grille. She turns toward the counter, smiling in confusion, and then hears the voice come from it again.</p>
+<p>“That isn't funny.” She searches behind the casing for a speaker. Your gauge needle jumps when you try to answer. She sees it and backs into a stool.</p><p>“That's <em>you</em>? The whole machine?”</p>
+<p>“I know how it looks.”</p><p>“I don't think you do. I'm looking at you and I keep looking for you.” Her voice breaks on the second part.</p>
+<p>She notices the cups on your tray. “Were they using—were you making the coffee?”</p><p>You start explaining the session. She interrupts once, apologizes, then has to sit before you reach the part about enjoying the precision.</p>
+<p>“Please just talk to me,” she says. “Don't make anything for a minute. I need to hear you being you.”</p><p>You tell her a small, familiar complaint about your old apartment. She laughs too loudly, then wipes at one eye.</p>
+<<case 'robot'>>
+<p>She recognizes you from the doorway. The relief lasts until she reaches the table and sees the seams around your jaw.</p><p>“What have you got on your face?”</p>
+<p>You turn your hand over. Brass moves between the porcelain plates. Nadia catches your wrist out of habit, feels the cool, hard surface, and lets go with a sharp little gasp.</p><p>“Sorry. I'm sorry. I thought it was something you were wearing.”</p>
+<p>“It's all the way through.”</p><p>She stares at the place a pulse should be. “And you're still in there?”</p>
+<p>The question hurts. You answer with the ridiculous nickname she gave your first car. Recognition crosses her face so abruptly that she has to look away.</p>
+<p>When she tries holding your hand again, she does it slowly. Her grip is uneven. Your new senses measure every tremor, while she tries not to stare at your fingers closing over hers.</p>
+<<case 'moth'>>
+<p>“She said she was right here.” Nadia bends over the notebook, then notices your wings and draws back. “Oh—there's something on it.”</p><p>“Nadia. It's me.”</p>
+<p>She goes utterly still. One of your wings unfolds. Her eyes follow it, then flick toward Theo as though he might supply a sensible alternative.</p><p>“You're made of <em>paper</em>?”</p><p>You say yes. The word sounds far too flimsy.</p>
+<p>Her hands hover uselessly above the table. “What if—there's a window open. What if you—”</p><p>“Could you shut it?”</p>
+<p>She does, fast, then returns and lowers herself into the chair. For a while all she can manage is watching you climb onto the notebook cover. You move one foot at a time so she can see that you are choosing to.</p>
+<<case 'shadow'>>
+<p>Nadia looks straight through the space where she expects you to stand. Your greeting comes out of the wall. She turns, then turns again.</p><p>“Where are you?”</p><p>You lift the hand in your silhouette. She looks toward the empty chair that should be casting it.</p>
+<p>“There isn't anyone there.” Her voice has dropped to a whisper.</p><p>“I'm on the wall.”</p>
+<p>She reaches toward your outline, stops short of the brick, and pulls her hand against her chest. “I can't—how am I supposed to—”</p>
+<p>You say her name and tell her to face the lamp. Recognition comes from the angle of your head, the old nervous hunch of one shoulder. She makes a small, shaken sound.</p><p>“I know that look.” She drags a chair around, watching you the whole time. “That doesn't make this make sense.”</p>
+<</switch>>
+<</if>>
+<<if $run.arc.visit.form !== 'human'>>
+<p>She starts three questions before finishing one. Eventually: “Did you want this?”</p><p>Your answer has more than one part. She listens, but her eyes keep returning to the impossible details. You're glad she's here. For once, you aren't the only person in the room who doesn't know how to react.</p>
+<<else>><p>She tells you about her own day. For a little while the cafe is simply the place where you happen to be sitting.</p><</if>>
+<<else>>
+<p>You send: <em>I'm safe. Strange day. I want to explain when I've had time to think.</em></p><p>Nadia replies with a time she will be free tomorrow. You're glad she hasn't dropped everything to come over.</p>
+<p>You dictate the account into your phone. Three headings: <em>What happened. What I liked. What I want done differently.</em> The third heading takes longest.</p>
+<</if>>
+<div class="choices"><<snChoice "Finish the shift and collect your pay" "OtherEvening" "payOtherShift" "The workday ends">></div>
+
+:: OtherEvening
+<div class="eyebrow">18:30 <span>·</span> OFF THE CLOCK</div><h1>No more orders.</h1>
+<div class="shift-summary"><div><span>Wages</span><strong>$88</strong></div><div><span>Shared tips</span><strong>$<<= $run.arc.visit.tips >></strong></div><div><span>Deposit fund</span><strong>$<<= $run.cash >> / $900</strong></div></div>
+<<switch $run.arc.visit.form>>
+<<case 'robot'>><p>Upstairs, you turn a page so precisely that you tear it at the binding. You sit very still afterward, looking at the damage. You'd expected reading to be easy.</p><p>You try the next page by sliding a finger beneath the corner. The paper catches against a joint. You lift, pause, and turn it without tearing anything. It has taken longer than making a latte.</p><p>You set a glass of water beside the bed out of habit. You do not need to drink. You leave it there.</p><p>Later, the pillow rustles under the smooth weight of your cheek. You wait for the usual heaviness behind your eyes. Instead, the distances in the room become less exact. You stop knowing the height of the lamp.</p><p>That frightens you awake twice. On the third attempt, you leave the lamp unmeasured and let the room blur.</p>
+<<case 'cup'>><p>You ask to spend the night in the back room on the padded shelf, away from the washing-up. Theo puts your phone where a tiny tilt of your base can tap the screen. Inez sleeps in the adjoining office; the call stays open.</p><p>There is a card beside your saucer: <em>Mara. Off duty.</em> It is absurd that you need it. You are grateful it exists.</p><p>The tea has been rinsed away. You can still trace the last warm ring around your inside, though the porcelain is cool. Each sound in the empty room leaves a faint note there.</p><p>You ask Inez to move you an inch from the edge. Then another inch. She moves the towel too, so you cannot see the drop beneath the shelf.</p><p>“There?”</p><p>You almost ask for more. “There.”</p><p>Rest comes in stretches when you stop listening for a hand approaching. Once, you wake because someone has touched your handle. It takes a while to understand that nobody has; you were dreaming.</p>
+<<case 'espresso'>><p>Inez empties the external water reservoir after you close your valves. Your boiler cools gradually. No one unplugs you without asking; you choose the quiet mode they have tested with you.</p><p>The cafe lights go out except for the lamp beside your counter. Your phone is on speaker. Inez stays in the office next door. You have never been so unable to pull a blanket over yourself.</p><p>You keep expecting the urge to start another cycle. As the boiler cools, it eases.</p><p>Cooling makes small sounds inside the casing. A tick from one copper coil, then another. You listen to each one with the suspicion you used to reserve for a strange noise in your car.</p><p>“Inez?”</p><p>“Still here.” Paper rustles through the phone speaker. “I'm reading.”</p><p>You ask her to read a little aloud. It turns out to be a supplier's catalogue, and she makes no attempt to improve it. You listen to a description of stackable bowls until you lose track of the sizes.</p>
+<<case 'moth'>><p>Theo carries the open notebook upstairs with you perched on its cover. He sets it in the dry, open-front nook you made beside the bed. The window is latched. The lamp is cool and dim.</p><p>A sleeve hangs from the chair above you. You recognize the shirt, but its loose cuff looks large enough to crawl into. You stay on the notebook. The ruled lines are a distance you already understand.</p><p>You fold your wings around yourself. One edge overlaps the other and catches. You have to open them again, slowly, before finding an arrangement that rests without pulling.</p><p>Sleep arrives as the easing of tension along each crease. A car door outside jolts you awake; your wings open before you know where you are. You settle them again and listen until the car drives away.</p>
+<<case 'shadow'>><p>You travel up the stairs along the wall while Theo carries a battery lamp. In your room he leaves it pointing at the clear space beside the bed, then goes when you ask.</p><p>You try lying down out of habit. Your outline spreads across the wall instead. The bed is close enough to look inviting and too far from the lit wall to reach without crossing the floor.</p><p>You decide to stay where you are. There is no mattress pressure to wait for, no cold foot to tuck beneath the other leg. You keep rearranging your outline in search of the feeling that means you have settled.</p><p>Eventually your arm lies along a crack in the plaster. You follow it as far as you can without moving. The lamp hums very faintly.</p><p>When you stop counting its little flickers, the room begins to recede. Your outline stays on the wall while you sleep.</p>
+<<default>><p>You go upstairs, take off the apron, and eat something that did not come from the cafe. It helps to have something to do that you already know how to do.</p>
+<</switch>>
+<p>The money is yours whether you choose another special or never touch one again. You check the total before letting the screen go dark.</p>
+<div class="choices"><<snChoice "Rest until morning" "OtherMorning" "wakeOtherMorning" "See what the night changes">></div>
+
+:: OtherMorning
+<div class="eyebrow">06:50 <span>·</span> THE NEXT MORNING</div><h1><<if $run.arc.visit.lingering>>Still here. Still changed.<<else>>An ordinary weight.<</if>></h1>
+<<if $run.arc.visit.lingering>>
+<p>You wake expecting the shock of normal skin. It does not come.</p>
+<<switch $run.arc.visit.form>>
+<<case 'robot'>><p>Your fingers click against each other. The joints are still brass, the plates still porcelain.</p>
+<<case 'cup'>><p>The shelf towers above you. You try to stretch and rock on your base instead. The sound of ceramic on the folded towel is almost nothing. You call Inez's name until she answers.</p>
+<<case 'espresso'>><p>A delivery rattles the front door. You know the sound through your metal feet before you are fully awake. The gauge remains in the center of your attention. You are still the machine.</p><p>“No service this morning,” you say at once. Theo covers the controls with the off-duty card.</p>
+<<case 'moth'>><p>You unfold paper wings. The same thin rustle. A tiny line of daylight under the curtain is suddenly enormous.</p>
+<<case 'shadow'>><p>The battery lamp is still on. Your outline is still on the wall. The coat on its hook has more weight in the world than you do.</p>
+<</switch>>
+<p><<if $run.flags.transformed>>Golden Hour ended before breakfast. You'd counted on that happening again.<<else>>You knew this could last into another day. You'd still expected to wake human.<</if>></p>
+<p>Inez reads back your starting time. She does not give you a deadline she cannot keep. “We'll watch the actual changes. Nobody needs you working today.”</p><p>You ask her to stay.</p>
+<<elseif $run.arc.visit.form === 'human'>>
+<p>You wake human after an ordinary shift. In the ledger, you write: <em>Ordinary coffee yesterday. No changes.</em></p>
+<<else>>
+<p>You wake with ordinary skin, an awkwardly bent knee, and a dry mouth. The special faded sometime before dawn. For several seconds you do nothing but count your fingers.</p><p>Then you remember how the other shape felt, and count your fingers again.</p>
+<</if>>
+<div class="choices"><<snChoice "Record what happens as it wears off" "OtherRecovery" "observeRecovery" "Stay with the whole experience">></div>
+
+:: OtherRecovery
+<div class="eyebrow">RECOVERY DAY <span>·</span> YOUR OWN ACCOUNT</div><h1>You come back in pieces.</h1>
+<<if $run.arc.visit.form !== 'human'>>
+<<if $run.arc.visit.lingering>><p>It begins at <<= setup.recoveryClock($run.arc.visit) >>, well after the breakfast you expected to eat with hands of your own.</p><<else>><p>You remember a half-waking interval before dawn, when the shape of the world began to change back around you.</p><</if>>
+<<switch $run.arc.visit.form>>
+<<case 'robot'>><p>The seams in your palms soften first. A finger flexes without the tiny click you have learned to expect. The return of ordinary imprecision makes you miss a button on your phone.</p><p>A pulse starts under your thumb. You press too hard and lose it, then ease off until you find it again. Warmth spreads beneath the glaze. The brass at each joint dulls, sinks, and leaves a crease in skin.</p><p>Your next breath feels necessary. You take it too quickly and cough. The sound has lost its bell edge; it is rough and embarrassingly loud.</p><p>You laugh, then have to stop because you are crying. Your new old hands shake. No mechanism offers to correct them.</p>
+<<case 'cup'>><p>A pressure inside your bowl becomes breath. The ceramic rim loosens into the outline of shoulders; your base unfolds into legs. Inez moves the padded mat to the floor before you become too large for the shelf.</p><p>Your handle separates into an elbow and a hand. Fingers arrive last, clenched around nothing. The glaze resolves into skin and the clothes you wore. You stay sitting for a long time, overwhelmed by how far away your feet are.</p><p>Your tongue finds the inside of your teeth. Having an inside this small, one you can close without anyone else's help, makes you swallow several times.</p><p>Inez offers water in an ordinary glass. You take it yourself. When you tilt it, you have to watch the level; you cannot feel where the water ends. A little spills down your shirt.</p>
+<<case 'espresso'>><p>The pressure gauge stops feeling like a clock inside your chest. The boiler empties through the normal drain before the casing softens. Inez lowers the wheeled bench; Theo steadies the padded mat.</p><p>The group heads uncurl into arms. Brass joints turn to elbows, the broad casing narrows, and your legs unfold where the machine feet stood. Your apron separates from your shirt in a soft rush of fabric.</p><p>You take a breath that is only a breath. You listen to the real espresso machine across the room and have to ask Theo to switch it off for a minute.</p><p>Your arms feel too long. You bring a hand toward your face and stop halfway, afraid of striking something. There is no wand at the end, no weight from a locked handle. You touch your cheek with the backs of your fingers.</p><p>Later, Theo puts a coffee beside you. You recognize the smell, but the familiar resistance behind it is gone. You wait until he has walked away before picking it up.</p>
+<<case 'moth'>><p>The crease along one wing fills with warmth. Paper thickens into fabric and skin, and the notebook beneath you is moved aside as you grow. Fold after fold opens into a familiar limb.</p><p>Your hair falls against your neck. It weighs an unreasonable amount. You keep one hand on the floor until you believe it can hold you.</p><p>The room stops announcing every small movement of air. Theo walks past and nothing tells you he is coming until you hear his shoe. You miss the warning enough to turn too quickly.</p><p>The brass clip has almost no weight again. You take it out, balance it on your palm, and look at the shallow bend where your paper body rested.</p>
+<<case 'shadow'>><p>Your outline lifts from the wall a little at a time. First the fingertips, then the weight of a wrist. The shadow that remains behind you begins following instead of choosing.</p><p>Your heel reaches the floor. Weight travels up your leg and nearly puts you on your knees. Theo lets you hold his arm. You lean against him while you get used to the weight.</p><p>You lift your free hand into the gap between you and the wall. It stays there, supported by your own wrist. You turn it over twice. The brick is something you can touch now, rather than something running all the way through you.</p><p>Theo reaches to switch off the lamp and you catch his sleeve.</p><p>“Just another minute.”</p><p>He leaves it on while you sit down in the chair.</p>
+<</switch>>
+<div class="outcome">Observed duration: <<= $run.arc.visit.durationHours >> hours · human again · illustrations retained</div>
+<p>You add the recovery time to the ledger in your own handwriting. <<if $run.arc.history.length > 1>>The numbers have been growing. They don't seem to follow how much you liked the experience.<<else>>You have a time to compare with the next one, if there is a next one.<</if>></p>
+<<else>><p>You leave the recovery column blank. You fill the afternoon with laundry and a walk outside.</p><</if>>
+<p>You take the rest of the day off. You can think about the next shift tomorrow.</p>
+<div class="choices"><<if ['nadia','theo','inez'].some(person => setup.game.eveningAvailable($run, person))>><<snChoice "Make plans for the evening" "AfterHours" "" "Spend time with someone outside your shift">><</if>><<if $run.arc.completed < 5>><<snChoice "Return for the next scheduled shift" "OtherShift" "nextOtherShift" "Another day · another choice">><<else>><<snChoice "Talk about what happens next" "OtherDecision" "" "The end of the trial period">><</if>></div>
+
+:: OtherDecision
+<div class="eyebrow">FIVE SHIFTS LATER <span>·</span> TERMS OF YOUR OWN</div><h1>The key on the table.</h1>
+<p>You set the pear-shaped key beside Inez's ledger. You asked her to meet you here.</p><p>You have $<<= $run.cash >>. <<if $run.arc.history.length || $run.flags.transformed>>You have accounts of bodies you could not have imagined a fortnight ago.<<else>>You know rather more about this place than when you arrived.<</if>> You also have Nadia's offer of a spare room for a week, and the numbers of two places hiring.</p>
+<p>There is another book under the ledger: supplier numbers, maintenance dates, notes about who opens on which days. Your stock estimate is still pencilled into the margin.</p><p>“You're teaching me quite a lot for someone on a trial,” you say.</p><p>Inez rests a hand on the cover. “You keep noticing things.”</p><p>It is an answer, though you are not sure it is the whole one.</p>
+<p>“If I stay,” you say, “the housing agreement needs its own notice period. No specials in my job description. My recovery records belong to me. Ordinary shifts whenever I ask.”</p><p>Inez puts her pen down to listen. “Yes.”</p><p>You make her write the terms anyway.</p>
+<p>Theo waits by the door. Nadia's message says the boxes are moved. They are waiting for your answer.</p>
+<<if setup.game.eveningCount($run, 'theo') === 2>><p>You look at Theo. Whatever you decide, his question about his own future will still be waiting for Inez.</p><</if>>
+<<if setup.game.eveningCount($run, 'nadia')>><p>You picture Nadia outside the cinema, arguing about the poster. You can still see her there, whichever place you come home to.</p><</if>>
+<div class="choices"><<snChoice "Stay, with the written terms" "OtherEnding" "stayCafe" "Keep the job and the room upstairs">><<snChoice "Take Nadia's spare room and leave" "OtherEnding" "leaveCafe" "Give Inez back the key">></div>
+
+:: OtherEnding
+<div class="eyebrow">CHAPTER TWO COMPLETE <span>·</span> SECOND NATURE v0.8</div><h1><<if $run.flags.arcEnding === 'stayCafe'>>Your name on the rota.<<else>>A different door.<</if>></h1>
+<<if $run.flags.arcEnding === 'stayCafe'>>
+<p>You take back the key after Inez signs. You have your own copy of the housing agreement now.</p><p>The next rota has your name and your hours. Inez asks whether, one morning next week, you would sit with her while she makes the order for the whole shop.</p><p>“Just sit with you?”</p><p>“To start.” She slips the book back beneath the counter.</p><p>You pin your copy of the terms above the desk. There is another question to ask her, eventually. Tonight, you unpack the last bag.</p>
+<<else>>
+<p>Nadia takes the canvas bag. You pull the suitcase with the reluctant wheel. The key stays on the table.</p><p>At the door, you look back. You can remember the counter from above it, beside it, perhaps even as a place your whole body stood. Leaving won't make any of it less strange.</p><p>You have a week in the spare room to work out what comes next. You leave with your wages and a friend who asks where you would like to stop for dinner.</p>
+<</if>>
+<div class="end-note"><span class="small-label">END OF THIS CHAPTER</span><p>You completed five further shifts. Your choices, observed recovery times, earnings, and discovered forms remain in this save. Restarting begins a new playthrough with different paths available.</p></div>
+<div class="choices"><div class="choice"><<link "Read your account">><<run setup.dialog('Notebook')>><</link>></div><div class="choice"><<link "Review discovered forms">><<run Dialog.create('Discovered forms'); Dialog.wikiPassage('OtherGallery'); Dialog.open()>><</link>></div><div class="choice"><<link "Start another playthrough">><<run UI.restart()>><</link>></div></div>

@@ -1,0 +1,155 @@
+:: AfterHours
+<div class="eyebrow">18:10 <span>·</span> THE EVENING IS YOURS</div><h1>Somewhere to go.</h1>
+<p>Your apron is upstairs. Nadia is passing the cinema, Theo is closing, and there is still a light under Inez's office door.</p>
+<p>You have time to spend with one of them before bed.</p>
+<div class="choices">
+<<if setup.game.eveningAvailable($run, 'nadia')>><<snChoice "Meet Nadia outside the cinema" "NadiaEvening" "eveningNadia" "A walk beyond the cafe windows">><</if>>
+<<if setup.game.eveningAvailable($run, 'theo')>><<snChoice "Keep Theo company after closing" "TheoEvening" "eveningTheo" "He has something to show you">><</if>>
+<<if setup.game.eveningAvailable($run, 'inez')>><<snChoice "Knock on Inez's office door" "InezEvening" "eveningInez" "The shop has been here longer than she has">><</if>>
+<<snChoice "Leave the evening unplanned" "OtherRecovery" "" "Return to your recovery day">>
+</div>
+
+:: NadiaEvening
+<div class="eyebrow">18:30 <span>·</span> TWO STREETS AWAY</div>
+<<if $run.arc.visit.outing.chapter === 1>>
+<h1>Beyond the warm windows.</h1>
+<p>Nadia is examining a cinema poster with the concentration she usually reserves for a suspicious parking sign.</p>
+<p>“That shark has six legs.”</p><p>“Maybe it's about personal growth.”</p><p>“It has a helicopter in its mouth, Mara.”</p>
+<p>You stand beside her. The pavement is wet, and the passing buses drown out every third word. You had forgotten how much street there was beyond the cafe.</p>
+<<if $run.flags.transformed || $run.arc.history.length>><p>You rub your thumb along the joints of your fingers. Nadia notices.</p><p>“Are they all right?”</p><p>“Yes. I'm checking.”</p><p>She looks at your hands for a moment, then back at the poster. “Okay.” Her voice is careful. She isn't going to ask the next question for you.</p>
+<<else>><p>You look back along the road toward the cafe. Nadia follows your glance.</p><p>“You know they can close without you?”</p><p>“I've heard that.”</p><p>“From a reliable source?”</p><</if>>
+<div class="choices"><<snChoice "Tell her what's been on your mind" "EveningReply" "nadiaHonest" "Let the explanation be unfinished">><<snChoice "Ask for an evening without cafe talk" "EveningReply" "nadiaOrdinary" "There is a six-legged shark to discuss">></div>
+<<else>>
+<h1>Her turn.</h1>
+<p>This time Nadia has bought the tickets. She holds them out without looking up from her phone.</p>
+<p>“Sorry. Work.” She types three words, erases them, and locks the screen.</p>
+<p>You start to tell her about your day. Then you notice she has put both tickets into your hand, including hers.</p>
+<p>“Bad one?”</p><p>She nods. “Nobody did anything wrong. I think that's why I'm still angry.”</p>
+<p>You both move out of the doorway. She keeps trying to straighten a bent corner of her hospital badge.</p>
+<p>“I don't need you to fix it,” she says.</p><p>“I was going to suggest a helicopter-eating shark.”</p><p>That gets half a smile. “We have ten minutes.”</p>
+<div class="choices"><<snChoice "Stay and listen to her" "EveningReply" "nadiaListen" "Let the trailers start without you">><<snChoice "Take her inside for the terrible film" "EveningReply" "nadiaFilm" "Put both phones away">></div>
+<</if>>
+
+:: TheoEvening
+<div class="eyebrow">18:30 <span>·</span> AFTER THE LOCK TURNS</div>
+<<if $run.arc.visit.outing.chapter === 1>>
+<h1>A face for radio.</h1>
+<p>Theo locks the door and takes two cups down from the shelf.</p><p>“Tea. Leaves, water. No surprises.”</p>
+<p>Then he shows you a photograph.</p>
+<p>A brown tabletop radio sits on this very counter. Its grille is a little crooked. Theo's glasses rest across the tuning dial.</p>
+<p>“That was me.”</p><p>You look at the photograph, then at the man holding it. “You were a <em>radio</em>?”</p><p>“Reception wasn't even good.”</p>
+<p>He laughs before you do, but one thumb worries the photograph's corner.</p>
+<p>“I watched my shirt turn into that grille. All the little holes opening. Tried to yell, got the weather forecast.” He points at the dial. “That bit used to be my nose. Took ages to stop trying to scratch it.”</p>
+<p>“You're making this sound funny.”</p><p>“I've had practice telling it.” He looks down at the picture. “It wasn't funny for quite a while.”</p>
+<div class="choices"><<snChoice "Ask what he liked about it" "EveningReply" "theoRadio" "The photograph is well looked after">><<snChoice "Ask why he came back the next day" "EveningReply" "theoReturn" "He could have kept walking">></div>
+<<else>>
+<h1>The back of an envelope.</h1>
+<p>The radio photograph is propped beside the till. Theo has spread several less flattering pieces of paper around it.</p>
+<p>“Don't laugh.”</p><p>“I haven't seen it yet.”</p><p>“Getting it in early.”</p>
+<p>There is a sketch of the kitchen doorway, a list of repairs, and an envelope covered in figures. You recognize the rent from the invoice folder.</p>
+<p>“I want a share,” he says. “In the business. I've got some money put aside. I know the equipment, I do half the ordering. I just haven't…”</p><p>“Asked?”</p><p>He nudges the envelope straight. “Made it an actual conversation.”</p>
+<p>You think of Inez asking you about deliveries and stock. Theo glances at the morning book, then away.</p><p>“I'm glad she's showing you things,” he says. “I'd like to know where that leaves me, too.”</p>
+<div class="choices"><<snChoice "Encourage him to ask Inez directly" "EveningReply" "theoAsk" "Help him find the first sentence">><<snChoice "Offer to check the figures with him" "EveningReply" "theoNumbers" "Start with the envelope">></div>
+<</if>>
+
+:: InezEvening
+<div class="eyebrow">18:30 <span>·</span> THE QUIET SHOP</div>
+<<if $run.arc.visit.outing.chapter === 1>>
+<h1>The coat stand objects.</h1>
+<p>You are hanging your jacket by the door when the coat stand clears its throat.</p>
+<p>You drop the jacket.</p><p>“Not the wet umbrella,” it says. “There's a pot for those.”</p>
+<p>The mahogany pole turns a fraction on its base. A knot in the wood narrows into an eye. Farther up, a carved eyebrow lifts over the scarf.</p>
+<p>“Inez.” You say her name without turning around. “The furniture is talking.”</p><p>“That's Bea.” Inez comes out of the office. “She usually tells people before they reach for a hook.”</p><p>“Usually they say hello before hanging things on me.”</p>
+<p>“Hello,” you say.</p><p>“There we are.”</p>
+<p>One empty hook curls down toward your jacket. You pick it up yourself. Up close, you can see the grain bend around Bea's moving mouth. You keep looking for the rest of a woman behind the pole.</p>
+<p>“I come on my day off,” Bea says. “Good view of the street. Nobody asks me to find their glasses.”</p><p>A pair of glasses hangs from her lowest hook.</p><p>“Those are mine.”</p>
+<div class="choices"><<snChoice "Ask Bea what it feels like" "EveningReply" "beaFeeling" "Try to stop staring at the hooks">><<snChoice "Ask Inez where the recipes came from" "EveningReply" "inezRecipes" "Somebody had to make the first one">></div>
+<<else>>
+<h1>A name in the margin.</h1>
+<p>Bea is back by the door. You say hello before taking a chair. One hook lifts in acknowledgment.</p>
+<p>Inez has two books open in the office: the ordinary accounts, and a recovery ledger with a split cloth spine.</p>
+<p>You recognize the older handwriting. Whole recipes are crossed out. Some entries have times added in a different pen.</p>
+<p>Halfway down one page, you find <em>I. Vale</em>.</p>
+<p>The starting time is neat. The recovery time has been written so hard that the next page carries its impression.</p>
+<p>Inez sees where you are looking. For once, she closes the ordinary accounts instead.</p>
+<p>“I wasn't very patient.”</p><p>“Was somebody telling you to wait?”</p><p>She rubs a thumb over the dent in the paper. “Yes.”</p>
+<div class="choices"><<snChoice "Ask about her first change" "EveningReply" "inezPast" "Her name is already on the page">><<snChoice "Ask her to show you the ordinary accounts" "EveningReply" "inezAccounts" "Leave the other book open">></div>
+<</if>>
+
+:: EveningReply
+<div class="eyebrow">LATER <span>·</span> BEFORE YOU HEAD HOME</div><h1><<= setup.game.eveningAnswers[$run.arc.visit.outing.answer].title >></h1>
+<<switch $run.arc.visit.outing.answer>>
+<<case 'nadiaHonest'>>
+<<if $run.flags.transformed || $run.arc.history.length>><p>You tell her about the drinks, starting badly and going back twice. Then you admit that you miss parts of how they felt.</p><p>Nadia looks at your hands again. “You miss it?”</p><p>“Parts. I don't know how to explain the parts.”</p><p>She takes a breath. “All right. Try. I've got time.”</p><p>You describe one sensation, then another. She asks questions you cannot answer yet. You let her see you trying.</p>
+<<else>><p>You tell her about the other menu and the cups you keep turning down. “I'm curious. I just don't know if curious is enough.”</p><p>“To drink one?” She stares at you. “Mara, I've only just got to the bit where you're saying they actually work.”</p><p>You start again, more slowly.</p><</if>>
+<p>“Call me,” she says when you finish. “Before you try fitting all of that into <em>strange day</em>.”</p><p>On the way home, you keep your phone in your hand.</p>
+<<case 'nadiaOrdinary'>>
+<p>“Could we leave work out of it tonight?”</p><p>Nadia starts to ask something, then points at the poster instead. “Fine. Explain the legs.”</p>
+<p>By the next corner you have invented a plot considerably worse than the one advertised. She insists you both come back and check.</p>
+<p>You take a picture of the showtimes. For once, the next thing in your phone has nothing to do with the cafe.</p>
+<<case 'nadiaListen'>>
+<p>You stand beside her and wait. After a while, she tells you about trying to sound calm for someone when she wasn't feeling calm herself.</p><p>She leaves out names. She loses her place once and starts again.</p><p>“I keep thinking of something better I could have said.”</p><p>“Do you want suggestions?”</p><p>“God, no.”</p><p>“Good. I was struggling.”</p>
+<p>She laughs into her sleeve. You miss the trailers. Neither of you mentions it when you find your seats.</p>
+<<case 'nadiaFilm'>>
+<p>You hold the door while Nadia puts her phone away.</p><p>The shark acquires its sixth leg in the first ten minutes. You lean over to point this out and find her already shaking with silent laughter.</p><p>“Character development,” she whispers.</p>
+<p>For ninety minutes, the most urgent problem in either of your lives is whether a helicopter can fit inside that mouth. Walking home, she reaches for your arm as naturally as she ever has.</p>
+<<case 'theoRadio'>>
+<p>“Being heard,” he says, after considering it. “Once I could get a sentence out. People actually stopped to listen.”</p><p>He turns the photograph toward you.</p><p>“And the bass. Felt it through the whole wooden case. That was nice. Hard to explain without sounding like I'd lost my mind.”</p>
+<p>“Did you?”</p><p>“No. Still knew every song I hated.”</p><p>You laugh. He leaves the picture on the counter instead of putting it back in his pocket.</p>
+<<case 'theoReturn'>>
+<p>“I went round the block three times.”</p><p>Theo traces the photograph's worn edge.</p><p>“Thought she'd have taken me off the rota. Or want me to do it again. She handed me a cloth and asked if I'd slept.”</p><p>“That was enough?”</p><p>“For that morning.” He shrugs. “Then there was another one.”</p>
+<p>You look at the glasses balanced on the radio. “Who put those there?”</p><p>“Me. Took twenty minutes to talk her into getting the angle right.”</p>
+<<case 'theoAsk'>>
+<p>You try out opening sentences. Theo rejects the first for sounding too formal, then produces one that sounds like a resignation.</p><p>Eventually he writes: <em>Could we set aside an hour to talk about my future here?</em></p>
+<p>“Don't put <em>no rush</em> after it,” you say.</p><p>He crosses out two words.</p><p>The envelope goes into his apron pocket. The figures stay on the counter.</p>
+<<case 'theoNumbers'>>
+<p>You find a supplier total counted twice. Theo makes a noise into both hands.</p><p>“Good that you asked someone.”</p><p>“Please let that be the last thing you say for thirty seconds.”</p>
+<p>You check the rest in companionable silence. When you finish, the number is smaller and he looks less miserable.</p><p>“Could we do that again before I talk to her?”</p><p>You put your initials beside the corrected total.</p>
+<<case 'beaFeeling'>>
+<p>“The coats have weight,” Bea says. “I feel it all the way down to the floor. Move one and the whole balance changes.”</p><p>As you watch, a wooden curl tightens beneath a sleeve. The coat settles. Bea's eyes half close.</p><p>“That feels good?”</p><p>“Very. The scratchy scarf doesn't. Would you move it down a hook?”</p>
+<p>You ask where, then lift it carefully. Warm polished wood shifts beneath your knuckles.</p><p>“Thank you. You're much less damp than the last one.”</p><p>Behind you, Inez fails to hide a laugh.</p>
+<<case 'inezRecipes'>>
+<p>“Ada taught me,” Inez says. “She owned the shop before I did.”</p><p>She brings out a book with recipes written sideways to fit around stains.</p><p>“Did she invent them?”</p><p>“Some. She never told me which.”</p>
+<p>Bea makes a wooden clicking sound. “She told everyone that. Saved admitting she'd forgotten.”</p><p>Inez turns a page. There is a crossed-out measurement with <em>absolutely not</em> written beside it in her own hand.</p><p>“We check the old recipes,” she says. “Being in a book doesn't make them good.”</p>
+<<case 'inezPast'>>
+<p>“What were you?”</p><p>Inez rests her hand on the page. “Small enough to spend most of the morning under that table.”</p><p>You look beneath it.</p><p>“That could mean almost anything.”</p><p>“Yes.”</p>
+<p>She almost smiles, then looks back at the recovery time.</p><p>“I will tell you. I'd rather do it when I'm not also explaining the electricity bill.”</p><p>You leave the question there. She leaves the book open.</p>
+<<case 'inezAccounts'>>
+<p>Inez looks surprised. Then she moves the accounts between you.</p><p>The rent is worse than you expected. The pastry margin is better. You ask three questions about a supplier fee before she admits she has been meaning to call about it.</p><p>“Tomorrow,” you say.</p><p>“Listen to you.”</p>
+<p>When you stand to leave, she puts a sharpened pencil beside your chair. You notice it waiting there when you pass the office on your way upstairs.</p>
+<</switch>>
+<div class="outcome">Added to your notebook · remembered in later conversations</div>
+<div class="choices"><<if $run.arc.completed < 5>><<snChoice "Return for the next scheduled shift" "OtherShift" "nextOtherShift" "Rest before tomorrow's work">><<else>><<snChoice "Talk about what happens next" "OtherDecision" "" "The end of the trial period">><</if>></div>
+
+:: AfterHoursCallback
+<<set _evenings = setup.game.eveningHistory($run)>>
+<<if _evenings.length && _evenings[_evenings.length - 1].shift === $run.arc.visit.number - 1>>
+<<switch _evenings[_evenings.length - 1].answer>>
+<<case 'nadiaHonest'>><p>Nadia's message arrives before opening: <em>You can call with the unfinished version.</em> You leave it unread for a minute so the notification stays on your screen.</p>
+<<case 'nadiaOrdinary'>><p>Nadia sends a photograph of the shark poster. <em>Still six legs. Keeping an eye on it.</em> You nearly spill the first milk jug laughing.</p>
+<<case 'nadiaListen'>><p><em>Thanks for letting me be a mess yesterday,</em> Nadia writes. You send back: <em>You were very organized about it.</em></p>
+<<case 'nadiaFilm'>><p>Theo catches you grinning at your phone. Nadia has found another film with the same monster. It has seven legs on this poster.</p>
+<<case 'theoRadio'>><p>The radio photograph is beside the till. Theo catches you looking. “Don't request anything. I charge now.”</p>
+<<case 'theoReturn'>><p>Theo hands you a cloth as you arrive. “Sleep all right?” This time you hear the question a little differently.</p>
+<<case 'theoAsk'>><p>Theo shows you a time written on his envelope. “Thursday. An hour.” He folds it before you can congratulate him.</p>
+<<case 'theoNumbers'>><p>Theo has left a corrected copy of his figures beneath the radio photograph. Your initials are still beside the total.</p>
+<<case 'beaFeeling'>><p>There is a small note beside the umbrella pot: <em>Mara knows where these go. Ask her.</em> Bea has drawn an arrow underneath, rather aggressively.</p>
+<<case 'inezRecipes'>><p>Inez leaves Ada's book open beside a modern recipe card. The measurements disagree. “That's why we keep both,” she says.</p>
+<<case 'inezPast'>><p>Inez catches you looking under the office table. “Still not telling you before breakfast.”</p>
+<<case 'inezAccounts'>><p>You hear Inez on the phone about the supplier fee. She points at the pencil waiting beside your chair.</p>
+<</switch>>
+<</if>>
+
+:: AfterHoursAlbum
+<p class="dialog-intro">Evenings away from the ticket rail. Your choices stay in the notebook.</p>
+<<if setup.game.eveningCount($run, 'nadia')>><<sceneImage "assets/nadia-walk.png" "Human Mara and Nadia talk outside a cinema after the rain" "Nadia · beyond the warm windows">><</if>>
+<<if setup.game.eveningCount($run, 'theo')>><<sceneImage "assets/theo-radio.png" "Theo shows Mara a photograph of the radio he once became" "Theo · a face for radio">><</if>>
+<<if setup.game.eveningCount($run, 'inez')>><<sceneImage "assets/inez-bea.png" "Mara meets Bea, a talking wooden coat stand, while Inez watches" "Inez and Bea · the quiet shop">><</if>>
+
+:: EveningPeople
+<<if setup.game.eveningHistory($run).length>>
+<div class="evening-memories"><span class="small-label">BETWEEN SHIFTS</span>
+<<for _person range ['nadia','theo','inez']>>
+<<set _memories = setup.game.eveningHistory($run).filter(entry => entry.person === _person)>>
+<<if _memories.length>><p><strong><<= _person[0].toUpperCase() + _person.slice(1) >></strong> · <<= setup.game.eveningAnswers[_memories[_memories.length - 1].answer].memory >></p><</if>>
+<</for>></div><</if>>

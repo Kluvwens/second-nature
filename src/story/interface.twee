@@ -1,0 +1,84 @@
+:: StoryTitle
+Second Nature — First Shift 0.2
+
+:: StoryDisplayTitle
+Second Nature
+
+:: StoryData
+{
+  "ifid": "B81B875F-79D6-448A-A13F-7A94E0201088",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "Start"
+}
+
+:: StoryInit
+<<set $run = setup.game.initialState()>>
+
+:: StoryInterface
+<a class="skip-link" href="#passages">Skip to story</a>
+<header class="topbar"><a class="wordmark" href="#" aria-label="Second Nature" onclick="return false">SECOND <em>NATURE</em><span>THE OTHER MENU · v0.9</span></a><nav aria-label="Game tools" data-passage="Tools"></nav></header>
+<aside class="statusbar" aria-label="Shift and finances" data-passage="StatusBar"></aside>
+<main id="passages" aria-live="polite"></main>
+
+:: Tools
+<<link "Mara">><<run Dialog.create('Mara · day ' + ($run.day || 1)); Dialog.wikiPassage('CharacterSheet'); Dialog.open()>><</link>>
+<<link "Notebook">><<run setup.dialog('Notebook')>><</link>>
+<<link "People">><<run setup.dialog('People')>><</link>>
+<<link "Save / Load">><<run UI.saves()>><</link>>
+<<link "Restart">><<run UI.restart()>><</link>>
+
+:: StatusBar
+<span class="scene-location">DAY <<= String($run.day || 1).padStart(2, '0') >> <span>·</span> <<= setup.scene()[2] >> <span>·</span> <<= setup.scene()[0].toLowerCase() >></span><span class="status-finances">$<<= $run.cash >> <span>·</span> <<if $run.arc && $run.arc.visit>>shift <<= $run.arc.visit.number >>/5 <span>·</span> $<<= $run.arc.visit.tips >> tips<<else>><<if $run.day === 2>>yesterday: <</if>><<= $run.orders >>/3 orders <span>·</span> $<<= $run.tips >> tips<</if>></span><span class="status-form"><<if setup.currentForm()>><<= setup.currentForm().name.toUpperCase() >> · <<if $run.changed>>aware<<else>>changing<</if>><<elseif $run.changed>>HONEY · <<if $run.stress >= 3>>shaken<<else>>finding your edges<</if>><<elseif $run.form !== 'human'>>CHANGING · frightened<<elseif ($run.arc && $run.arc.history.length) || ($run.flags.morning && $run.flags.transformed)>>HUMAN AGAIN<<else>>HUMAN<</if>></span>
+
+:: CharacterSheet
+<div class="character-panel"><<include "CharacterPanel">></div><div class="character-finances"><<include "ShiftPanel">></div>
+
+:: ShiftPanel
+<span class="small-label"><<if $run.arc>>THE OTHER MENU<<elseif $run.day === 2>>THE NEXT MORNING<<else>>YOUR FIRST DAY<</if>></span><div class="day-number"><<= String($run.day || 1).padStart(2, '0') >><span><<= ['MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY'][(($run.day || 1) - 1) % 7] >></span></div><div class="shift-time"><span class="status-dot"></span><<= setup.scene()[2] >> <span>·</span> <<= setup.scene()[0].toLowerCase() >></div>
+<<if $run.arc>><div class="sidebar-section"><span class="small-label">THE TRIAL PERIOD</span><p class="aside-note">Completed shifts: <<= $run.arc.completed >> / 5<br>Discovered forms: <<= Object.keys($run.arc.discoveries).length >> / 5<br>Specials tasted: <<= $run.arc.exposures >></p></div><</if>>
+<div class="sidebar-section"><span class="small-label">ON YOUR LIST</span><ol class="task-list"><<if $run.arc && $run.arc.visit>><li @class="$run.arc.visit.flags.partner ? 'done' : ''">Find the morning rhythm</li><li @class="$run.arc.visit.flags.special ? 'done' : ''">Choose today's drink</li><li @class="$run.arc.visit.flags.service ? 'done' : ''">Find your way through work</li><li @class="$run.arc.visit.flags.paid ? 'done' : ''">Collect your wages</li><li @class="$run.arc.visit.flags.recovered ? 'done' : ''">Record the following morning</li><<else>><li @class="$run.flags.movedIn ? 'done' : ''">Drop off your bags</li><li @class="$run.orders >= 1 ? 'done' : ''">Learn the counter</li><li @class="$run.drink ? 'done' : ''">Take a real break</li><li @class="$run.orders >= 3 ? 'done' : ''">Finish the shift</li><li @class="$run.flags.paid ? 'done' : ''">Find your feet</li><</if>></ol></div>
+<div class="sidebar-section"><span class="small-label">A PLACE OF YOUR OWN</span><div class="money">$<<= $run.cash >><small> / $900</small></div><progress @value="$run.cash" max="900" aria-label="Apartment deposit savings"></progress><p class="aside-note">Saving for a place outside the cafe.</p></div>
+<div class="shift-stats"><<if $run.arc && $run.arc.visit>><div><span>This session's tasks</span><b><<= $run.arc.visit.jobs >></b></div><div><span>This session's tips</span><b>$<<= $run.arc.visit.tips >></b></div><<else>><div><span>First-shift orders</span><b><<= $run.orders >> / 3</b></div><div><span>First-shift tips</span><b>$<<= $run.tips >></b></div><</if>><div><span>Feeling</span><b><<if $run.stress >= 4>>Frayed<<elseif $run.stress >= 2>>Finding your feet<<else>>Settled<</if>></b></div></div>
+
+:: CharacterPanel
+<div class="portrait-label"><span class="small-label">YOU, FOR NOW</span><span>26</span></div>
+<<if setup.currentForm()>><img class="other-form-portrait" @src="'assets/' + setup.currentForm().art" @alt="'Mara\'s transformation into ' + setup.currentForm().name.toLowerCase()">
+<<elseif $run.form === 'softening'>><img class="stage-portrait" src="assets/honey-onset.png" alt="Mara's hands are softening into honey">
+<<elseif $run.form === 'spreading'>><img class="stage-portrait" src="assets/honey-spreading.png" alt="The honey transformation is spreading across Mara's face and hair">
+<<else>><div @class="'mara-portrait ' + ($run.changed ? 'changed' : 'baseline')" role="img" @aria-label="$run.changed ? 'Mara as a translucent amber honey slime woman, wearing her green shirt and charcoal apron' : 'Mara, with chestnut hair, freckles, a green shirt and charcoal apron'"></div><</if>>
+<div class="character-name"><h2>Mara Ellis</h2><span>NEW GIRL AT THE COUNTER</span></div>
+<div class="appearance-note"><span class="small-label">WHAT YOU NOTICE</span>
+<<if setup.currentForm()>><p><<= setup.currentForm().notice >></p><span class="change-chip"><<= setup.currentForm().drink.toUpperCase() >> · <<if $run.changed>>COMPLETE<<else>>CHANGING<</if>></span>
+<<elseif $run.form === 'softening'>><p>Amber palms. Softening fingers.<br>The table shows through your hand.</p><span class="change-chip">CHANGING · 01 / 03</span>
+<<elseif $run.form === 'spreading'>><p>Your face is turning translucent.<br>Your hair gathers into honey ribbons.</p><span class="change-chip">CHANGING · 02 / 03</span>
+<<elseif $run.changed>><p>Living honey, from head to toe.<br>Familiar eyes. Unfamiliar edges.</p><span class="change-chip">HONEY SLIME · GOLDEN HOUR</span><p class="form-control">Holding shape: <<if $run.formControl === 'steady'>>steady<<elseif $run.formControl === 'fluid'>>exploring flexibility<<else>>still learning<</if>></p>
+<<elseif $run.arc && $run.arc.history.length>><p>Ordinary skin. Chestnut hair.<br>Your last special lasted <<= $run.arc.history[$run.arc.history.length - 1].hours >> hours.</p><span class="change-chip neutral">HUMAN AGAIN · DAY <<= $run.day >></span>
+<<elseif $run.flags.morning && $run.flags.transformed>><p>Ordinary skin. Chestnut hair.<br>The first special wore off overnight.</p><span class="change-chip neutral">HUMAN AGAIN</span>
+<<else>><p>Chestnut hair. Familiar freckles.<br>Still finding your rhythm.</p><span class="change-chip neutral">HUMAN · BASELINE</span><</if>></div>
+<<if $run.flags.drink === 'taste'>><<set _honeyGalleryLabel = $run.arc ? 'Golden Hour illustrations' : 'Transformation images'>><div class="portrait-tools"><<link _honeyGalleryLabel>><<run Dialog.create('The transformation, step by step'); Dialog.wikiPassage('TransformationGallery'); Dialog.open()>><</link>></div><</if>>
+<<if $run.flags.transformed>><<set _comparisonLabel = $run.arc ? 'Compare your first two forms' : (($run.day || 1) >= 2 ? 'Compare your two forms' : 'Compare with this morning')>><div class="portrait-tools"><<link _comparisonLabel>><<run Dialog.create('Before / after Golden Hour'); Dialog.wikiPassage('Comparison'); Dialog.open()>><</link>></div><</if>>
+<<if $run.arc && Object.keys($run.arc.discoveries).length>><div class="portrait-tools"><<link "Other-menu illustrations">><<run Dialog.create('Discovered forms'); Dialog.wikiPassage('OtherGallery'); Dialog.open()>><</link>></div><</if>>
+
+:: Notebook
+<<if setup.game.eveningHistory($run).length>><p class="portrait-tools"><<link "After-hours illustrations">><<run Dialog.create('After hours'); Dialog.wikiPassage('AfterHoursAlbum'); Dialog.open()>><</link>></p><</if>>
+<p class="dialog-intro">Your notes from the cafe.</p><<for _entry range $run.journal>><article class="journal-entry"><h3><<= _entry.title >></h3><p><<= _entry.text >></p></article><</for>>
+
+:: People
+<<include "EveningPeople">>
+<article class="person-entry"><span class="person-icon inez" role="img" aria-label="Inez"></span><div><h3>Inez Vale <small>42 · Owner</small></h3><p>Warm, exacting, difficult to hurry. She gave you the key upstairs.</p><span class="relationship">A beginning of trust</span></div></article><article class="person-entry"><span class="person-icon theo" role="img" aria-label="Theo"></span><div><h3>Theo Park <small>29 · Senior barista</small></h3><p>Patient with coffee. Less direct about himself.</p><span class="relationship"><<if $run.theo >= 3>>You have let him in<<elseif $run.theo >= 1>>Finding common ground<<else>>Getting acquainted<</if>></span></div></article><article class="person-entry"><span class="person-icon nadia" role="img" aria-label="Nadia"></span><div><h3>Nadia Bell <small>27 · Your friend</small></h3><p>Knows your old routines. Learning your new ones.</p><span class="relationship"><<if $run.toldNadia>>Trusted with the strange part<<else>>A familiar anchor<</if>></span></div></article>
+
+:: Comparison
+<div class="comparison"><figure><div class="mara-portrait baseline" role="img" aria-label="Mara before: human, with chestnut hair"></div><figcaption>BEFORE THE FIRST CUP · HUMAN</figcaption></figure><figure><div class="mara-portrait changed" role="img" aria-label="Mara after: her entire body and hair are translucent amber honey"></div><figcaption>GOLDEN HOUR · HONEY SLIME</figcaption></figure></div><p class="dialog-intro">The same clip, the same clothes, the same eyes looking back. <<if $run.form === 'human' && $run.flags.morning>>You are human again. The pictures show what happened yesterday.<<elseif $run.arc>>Your first special. The photographs remain, whatever shape you take next.<<else>>Everything holding that shape has changed.<</if>></p>
+
+:: TransformationGallery
+<p class="dialog-intro">The stages you have experienced so far. Open any illustration to inspect it at a larger size.</p>
+<<sceneImage "assets/honey-onset.png" "Mara's palms and fingers soften into translucent honey" "01 · Hands and forearms">>
+<<if $run.flags.spread>><<sceneImage "assets/honey-spreading.png" "The change spreads through Mara's face and hair as she watches the mirror" "02 · Face, hair and reflection">><</if>>
+<<if $run.flags.transformed>><<sceneImage "assets/honey-settled.png" "Mara holds a whole body made of honey together above a shallow amber puddle" "03 · Her complete honey slime form">><</if>>
+<<if $run.flags.morning && $run.flags.transformed>><<sceneImage "assets/morning-human.png" "Mara examines her human hands on the edge of her bed the following morning" "04 · Human again, the next morning">><</if>>
+
+:: ChoiceWidgets [widget]
+<<widget "snChoice">><div class="choice"><<capture _args>><<link _args[0] _args[1]>><<if _args[2]>><<run setup.game.choose($run, _args[2])>><</if>><</link>><</capture>><<if _args[3]>><span class="choice-note"><<= _args[3] >></span><</if>></div><</widget>>
+
+<<widget "sceneImage">><figure class="story-illustration"><img @src="_args[0]" @alt="_args[1]"><figcaption><span><<= _args[2] >></span><<capture _args>><<link "View illustration">><<run setup.showArt(_args[0], _args[1], _args[2])>><</link>><</capture>></figcaption></figure><</widget>>

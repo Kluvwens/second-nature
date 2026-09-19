@@ -1,0 +1,227 @@
+:: RobotChange
+<div class="eyebrow">CLOCKWORK CREAM <span>·</span> THE CHANGE</div><h1>The click inside your hand.</h1>
+<p>The drink tastes of toasted sugar, then of the spoon you stirred it with. You put the cup down. Your hand arrives at the table a fraction before you expect it to.</p>
+<p>A pale line travels around your middle knuckle. Another crosses your wrist. For one terrible moment you think your skin is splitting. Then the spaces between the lines turn smooth and cream-colored, and you hear a tiny, decisive click.</p>
+<p>“Theo. Look at my hand.” You had been thinking about the quiet precision in the spoon's note. You had not imagined hearing it inside yourself.</p>
+<p>Your fingers open in five exact angles. The joints are brass now, fitted between curved porcelain plates. You press your thumb into your palm and feel pressure without the familiar give of flesh. The sensation has a location and a strength so clear that it is almost a number.</p>
+<p>The change climbs both forearms. A dull ache becomes a series of small adjustments: click, align, settle. Beneath your sleeve, your elbow turns on a hinge you can suddenly picture from the inside.</p>
+<p>You try to stand too quickly. Your knees lock straight. Panic rises hot and human inside a body that has already stopped warming the chair.</p>
+<p>“Stay sitting,” Theo says. “One movement.”</p>
+<p>You bend a single finger. It obeys. Then another. The precision is astonishing. For half a second it feels easier than having hands ever did, and you are furious with yourself for noticing.</p>
+<p>The seam at your throat closes with a soft tick. Your next breath becomes optional. You gasp anyway. The sound comes through a small resonant chamber behind your collarbone.</p>
+<p>You try to clear your throat. A pure little note comes out, without the scrape you expect. You repeat the cough until Theo touches the table beside your hand.</p><p>“I can hear you.”</p><p>“I know. I can't hear <em>me</em>.” You say the sentence again, quieter. The pitch bends with your frustration. You hold on to that small imperfection while the porcelain climbs your neck.</p>
+<p>In the mirror, cream glaze passes across your jaw. Your freckles survive as dark marks beneath it. Chestnut strands gather into smooth enamel curls; the brass clip stays caught above one temple. Your eyes remain grey-green, but a thin light gathers around each iris.</p>
+<p>The shirt and apron are still cloth. Beneath them, every inch of you has become an arrangement of plates and joints. Your feet press into your shoes with a measured weight. Somewhere in your attention, without words, you know exactly how to stand.</p>
+<p>You stand slowly, without wobbling. You still want Theo close enough to catch you.</p>
+<div class="choices"><<snChoice "Try speaking in your new voice" "RobotBody" "settleSpecial" "Complete · porcelain automaton">></div>
+
+:: RobotBody
+<div class="eyebrow">10:45 <span>·</span> CALIBRATION</div><h1>A suggestion before the thought.</h1>
+<<if $run.arc.visit.reflection>><p>Theo slides the empty tray within reach again. You rest both hands beside it before deciding how to begin.</p><<else>>
+<p>“My name is Mara Ellis.” Your voice is yours, with a clear bell-like edge. You repeat your address before this one, then the name of a song you hate. You need to know you still remember them.</p>
+<p>Theo sets an empty tray in front of you. Before you touch it, your attention supplies a grip, a route through the room, and the precise height of the counter. The suggestion has the comfortable weight of remembering how to walk.</p>
+<p>You lift the tray. No tremor. No small correction. It is so easy that you almost laugh.</p>
+<p>Then Theo says, “Could you put that over there?” and your elbow starts moving before you finish deciding.</p>
+<p>You stop it. The tray hangs between you. A faint unfinished sensation presses behind your eyes.</p>
+<p>“Ask me again,” you say. “With my name.”</p><p>“Mara. Would you like to put the tray away?”</p><p>This time you wait before moving.</p>
+<</if>>
+<div class="choices"><<snChoice "Explore the precision on your own terms" "RobotWork" "acceptPrecision" "Use the suggestions when you choose">><<snChoice "Keep your own words and rhythm" "RobotWork" "keepOwnVoice" "Practice interrupting the routine">><<if setup.game.canReflect($run)>><<snChoice "Take a minute before working" "BodyCheck" "" "Look more closely at what has changed">><</if>></div>
+
+:: RobotWork
+<div class="eyebrow">11:15 <span>·</span> AT THE COUNTER</div><h1>The perfect employee problem.</h1>
+<<if $run.arc.visit.approach === 'precision'>><p>You discover that three cups fit in your porcelain hand without touching. You can remember the queue in order and hear the moment the grinder changes pitch. For once, you aren't scrambling to keep up. You could get used to this.</p><p>You set a private rule: before following a suggested movement, name what you want it to do. <em>Carry the cups.</em> Then you let your hands move.</p>
+<<else>><p>The suggested greeting is bright, efficient, and completely wrong for your mood. You say, “Morning. Bear with me; I'm learning these hands.” The line arrives unevenly. The customer smiles and waits.</p><p>You make a tiny unnecessary gesture before picking up each cup: a tap against the counter, a turn of your wrist. Neither gesture makes you any faster.</p><</if>>
+<p>A regular asks if you get tired now. You cannot find muscle fatigue anywhere in your body. You can find irritation, distraction, and the desire to sit somewhere nobody needs anything.</p><p>“Differently,” you tell him.</p>
+<p>Theo offers a four-order trial, or a twelve-order session with a pause halfway through. Twelve sounds manageable with these hands. You're less sure about how much you want to keep going.</p>
+<div class="choices"><<snChoice "Take twelve orders, with a break" "RobotResult" "serviceLong" "Explore the routine">><<snChoice "Keep it to four orders" "RobotResult" "serviceShort" "Learn enough for today">></div>
+
+:: RobotResult
+<div class="eyebrow">13:10 <span>·</span> THE LAST TICKET</div><h1>The end of the queue.</h1>
+<<if $run.arc.visit.service === 'try'>><p>By order five, your hands anticipate the cup sizes. By six, you can feel how easily a whole afternoon could disappear into the next task.</p><p>You take the scheduled break with a queue still waiting. That is the difficult part. Sitting down feels like leaving a sentence unfinished.</p><p>For the next six orders, you choose the movement each time. At twelve you close the ticket rail yourself, though the routines could go on.</p>
+<<else>><p>Four orders: two americanos, an oat latte, a tea with the bag left in. Your new body makes all of them absurdly easy. You stop anyway.</p><p>“Are you broken?” the last customer asks when Theo takes over.</p><p>“I'm on a break,” you say. It rings beautifully through the ceramic chamber.</p><</if>>
+<p>Your hands remain steady. You're tired of watching them work.</p>
+<div class="choices"><<snChoice "Set down the last towel" "OtherAfterWork" "" "Leave the routine unfinished">></div>
+
+:: CupChange
+<div class="eyebrow">SMALL HOURS <span>·</span> THE CHANGE</div><h1>The room begins to grow.</h1>
+<p>Inez sets a folded towel on the low counter before you drink. You sit on it with your shoes over the edge. This preparation makes you more nervous than a surprise would have. Everyone else knows why the towel is needed.</p>
+<p>The first sensation is a cool smoothness beneath your nails. Your fingertips draw together as if held by a glove. You pull them apart; the space between them closes into one pale curve.</p>
+<p>“Wait.” Your voice is too loud. “That's already happening.”</p>
+<p>The cup you drank from has been moved away. Your own hands are glazing over, fingers losing their boundaries. You can still feel every point along the new surface. There are simply fewer places to bend it.</p>
+<p>The counter rises around you. Your feet no longer reach its edge. You grab for Theo's sleeve with a hand that has become a smooth, useless arc.</p>
+<p>He lays a palm beside you instead of lifting you. “I'm here.”</p>
+<p>Your back rounds. It does not hurt; it feels like being asked to stretch in a direction that has never existed. Your shoulders draw toward each other while the front of your torso opens into a shallow, perfectly clean hollow. The inside is as much you as the outside. Air crosses it, and you flinch everywhere at once.</p>
+<p>You try to scream. A clear ceramic note rings out.</p>
+<p>The shrinking changes sound before it stops changing size. Theo's sleeve brushes the towel with a coarse rush. A spoon touches the counter somewhere behind him, and the impact runs through your narrowing base.</p><p>You try to pull your knees up. The hollow deepens instead. Your sense of where your middle should be spreads around its walls, leaving nothing at the center to tighten against the fear.</p>
+<p>“I can hear you,” Theo says immediately. “Try one word.”</p>
+<p>“Mara.” The name vibrates along a rim that used to be your shoulders.</p>
+<p>Your legs shorten beneath you, shoes and trousers flattening into a charcoal band around a narrowing base. One arm curls back on itself to form a handle. The other smooths into the bowl. Your shirt becomes green glaze beneath the rim; the apron leaves a dark stripe down one side.</p>
+<p>The mirror is now an enormous rectangle across the room. Your face has become a small relief in the porcelain: worried eyes, freckles, a suggestion of your mouth. Hair settles into a chestnut sweep around the lip. The brass clip catches on your handle with a tiny clink.</p>
+<p>You stop shrinking. You fit on the towel where one of your hands would have rested.</p>
+<p>There is no breath to catch. You spend several seconds trying to catch it anyway.</p>
+<div class="choices"><<snChoice "Call to Theo from the towel" "CupBody" "settleSpecial" "Complete · porcelain cup">></div>
+
+:: CupBody
+<div class="eyebrow">10:45 <span>·</span> AT SAUCER HEIGHT</div><h1>Please ask before you lift me.</h1>
+<<if $run.arc.visit.reflection>><p>Theo waits beside your saucer. The little bell is still within reach. You test it once before talking about the first session.</p><<else>>
+<p>The world arrives through your whole curved surface. Voices resonate in your empty bowl. The grain of the towel is distinct beneath your base. You can tip a little, enough to ring against a saucer, but you cannot get off the counter under your own power.</p>
+<p>If someone decided to put you somewhere else, you couldn't get back.</p>
+<p>“Please ask before you lift me.”</p><p>Theo repeats the rule to Inez in exactly those words. They test your ringing voice against the grinder, then give you a little bell you can touch with the edge of your base.</p>
+<p>“Would you like to try warm water?”</p><p>You say yes, then almost take it back as the first drop touches your inner surface. Warmth spreads in a circle. You feel it settle inside your bowl without swallowing anything. You know exactly where the water ends.</p>
+<p>It is strange enough to make you want to stop. It is soothing enough to make you wait one more second.</p>
+<</if>>
+<div class="choices"><<snChoice "Let Theo handle the first session" "CupWork" "familiarHands" "Keep a familiar voice close">><<snChoice "Meet a few regulars who know the menu" "CupWork" "meetRegulars" "Hear how they see the experience">><<if setup.game.canReflect($run)>><<snChoice "Take a minute before working" "BodyCheck" "" "Look more closely at what has changed">><</if>></div>
+
+:: CupWork
+<div class="eyebrow">11:15 <span>·</span> FILLED AND EMPTY</div><h1>Used to hold something.</h1>
+<p>The first tea pours in a thin amber stream. You feel the water level climb as a band of heat around your entire inside. The leaves' scent is less a smell than a taste distributed through the glaze.</p>
+<p>A hand closes around your handle. Not painful; unmistakable. Your world rises and tilts. Instinct tells you to catch your balance with feet that no longer exist.</p>
+<p>“Slowly,” you ring out. The hand stops. “All right. Keep going.”</p>
+<p>When the drinker takes a sip, the tea moves across your bowl and leaves a cooling arc below the rim. You know exactly how much remains. The saucer meets your base with a small impact that runs through your whole body.</p>
+<<if $run.arc.visit.approach === 'familiar'>><p>Theo drinks while reading invoices at the quiet table. He narrates each lift until you tell him the warning is becoming more distracting than the movement. He stops narrating. The next lift is easier without the running commentary.</p>
+<<else>><p>The first regular, a woman with silver glasses, introduces herself as Len. She asks about your morning before touching the handle. The next person begins talking to Inez about you. You ring the bell.</p><p>“You can ask me.” Everyone at the table stops talking.</p><</if>>
+<p>A refill returns the warmth all at once. You begin to understand why someone might choose this. You aren't shifting in a chair, trying to get comfortable; someone is holding you carefully, and the heat reaches everywhere. You wish you didn't have to remind people you can hear them.</p>
+<p>Between servings, Theo rinses you over a basin. The water circles your inner surface, carrying away the last faint taste of tea. When he turns you upright, a drop travels down your outer wall. You wait for a tickle, but it feels broader than that, a cool line you can follow from rim to base.</p><p>The towel touches you next. You ask him to leave the handle uncovered while he dries the rest. You can speak through it, but the muffled sound makes you want to shout.</p>
+<div class="choices"><<snChoice "Continue through twelve tea servings" "CupResult" "serviceLong" "Refills, rinses, and a pause between sessions">><<snChoice "Finish after four tea servings" "CupResult" "serviceShort" "Enough being handled for today">></div>
+
+:: CupResult
+<div class="eyebrow">13:10 <span>·</span> ON THE SAUCER</div><h1>A day measured in refills.</h1>
+<<if $run.arc.visit.service === 'try'>><p>By the fourth serving you know the difference between a careful lift and a distracted one before leaving the saucer. At six, you ask to sit empty beside the window. The cool air feels enormous after so much warmth.</p><p>You agree to six more. Tea, a gentle hand rinse, tea again. Each cycle changes the sound of your voice: fuller when filled, thin and bright when empty. You start announcing your own readiness instead of waiting to be asked.</p><p>At the twelfth emptying, someone reaches for the kettle. “That's my last,” you say. The kettle goes down.</p>
+<<else>><p>The fourth serving cools slowly. You ask to be emptied before the drink is finished. A foolish guilt arrives with the request, as if leaving tea were wasting someone else's afternoon.</p><p>Theo pours it out, rinses you gently by hand, and places you on a fresh towel. “Four was the plan.”</p><p>You had needed to hear that. You wish you hadn't.</p><</if>>
+<p>No dishwasher, no cupboard with the door shut. You choose a place on the table where you can follow the conversation. You still want to talk, even if nobody wants more tea.</p>
+<div class="choices"><<snChoice "Ask for a quiet place on the table" "OtherAfterWork" "" "Stay where you can hear everyone">></div>
+
+:: EspressoChange
+<div class="eyebrow">HOUSE PRESSURE <span>·</span> THE CHANGE</div><h1>The heat finds a new place.</h1>
+<p>You sit on the padded workbench Inez has lowered almost to the floor. A trolley stands beside it. You don't ask what the trolley is for yet.</p>
+<p>The special tastes dark and almost smoky. Warmth settles under your ribs. Then it remains there, a round, steady presence that does not move with your breathing.</p>
+<p>You put a palm against your shirt. Something inside answers with a click.</p>
+<p>“No. That sounded like—” You look at the machine across the room.</p>
+<p>Your fingertips turn copper. Not colored skin: cold, smooth metal, with pressure carrying farther than it should. The fingers of one hand draw together into a short cylinder. Your other wrist narrows and bends with a hinge-like resistance.</p>
+<p>You try to pull both hands into your lap. Your arms no longer agree about where your lap is.</p>
+<p>The green of your shirt becomes glossy. Fabric stiffens across your middle, broadening into an enamel casing. Beneath it, the warm place rounds into a boiler you can feel from every side at once. You do not see pipes, but you know where they run with the certainty you used to have about your tongue.</p>
+<p>Theo crouches level with you. You latch onto his face while the workbench appears to rise.</p>
+<p>Your forearms shorten. One draws inward and divides into two brass group heads beneath the front panel; the other becomes a curved steam wand. The loss of your hands is so sudden that you attempt to grab the bench three times before understanding why nothing moves.</p>
+<p>“I'm still here,” you say. You are telling yourself.</p>
+<p>“I know,” he answers.</p>
+<p>Your knees pull beneath the widening casing. Trousers flatten into dark enamel, shoes contract into four short feet, and the pressure of the bench becomes four small, separate squares. Your field of awareness settles lower, looking outward from the machine's front.</p>
+<p>You try to curl your toes. For a second the effort seems to find them. Then all four points of contact grow equally clear, and you cannot tell which pair used to be your feet.</p><p>The room tilts as your weight settles between them. Theo keeps his palms close to the casing without touching it. You ask him to hold you steady before you can think how strange the request will sound.</p>
+<p>A round gauge emerges where the apron bib was. Its needle moves with the heat inside you. Your head draws back into the casing; the panic of losing your face peaks just as your voice finds a new resonance behind the grille.</p>
+<p>Chestnut hair curls into copper coils along your back. Your reflection survives as an oval ceramic badge: grey-green eyes and freckles, small enough to cover with a palm. The brass clip rests beside the gauge.</p>
+<p>The change finishes with a soft release of air. No legs to stand on, no shoulders to turn. You are a compact espresso machine on a workbench, aware of every valve, and desperately wishing someone would say your name again.</p>
+<div class="choices"><<snChoice "Tell them you can still hear everything" "EspressoBody" "settleSpecial" "Complete · espresso machine">></div>
+
+:: EspressoBody
+<div class="eyebrow">10:45 <span>·</span> BEFORE THE FIRST SHOT</div><h1>Learning the valves.</h1>
+<<if $run.arc.visit.reflection>><p>You ask Theo to empty the test bowl. Your valves stay closed while you talk through how the first shot will work.</p><<else>>
+<p>Theo says “Mara” before asking whether he may move the trolley. You answer through the grille. The sound is yours, with a low metallic echo.</p>
+<p>Your view is broad and fixed. You can sense contact anywhere on the casing, but cannot turn to follow a person walking behind you. Inez tells you where she is before attaching the external reservoir.</p>
+<p>Water enters an ordinary tank. It is separate from the small hot core you identify as yourself, until you open an intake valve and feel a cool measure arrive in the boiler. No thirst. More like extending a hand into a stream and discovering that the hand is inside you.</p>
+<p>The heater answers your attention. Warmth builds. As the gauge needle rises, you feel an urge to release the pressure. You hadn't expected to want to do that.</p>
+<p>“I can make it stop,” you say, experimenting. The heater clicks off. The pressure remains, but the demand softens.</p>
+<p>“Your control,” Inez says. “We handle coffee and cups. You handle the valves. Either of us can call a pause.”</p>
+<p>The first test uses plain water. A short release, then a clean stop. You hear the splash in a bowl on your tray and realize you can feel the vibration of each drop arriving.</p>
+<</if>>
+<div class="choices"><<snChoice "Control the pressure and timing yourself" "EspressoWork" "ownPressure" "Learn the cycle from inside">><<snChoice "Ask Theo to talk through each cycle" "EspressoWork" "sharePressure" "Keep a human rhythm beside yours">><<if setup.game.canReflect($run)>><<snChoice "Take a minute before working" "BodyCheck" "" "Look more closely at what has changed">><</if>></div>
+
+:: EspressoWork
+<div class="eyebrow">11:15 <span>·</span> FIRST EXTRACTION</div><h1>On the other side of the handle.</h1>
+<p>The portafilter slots into the group head with a quarter turn. You feel its weight settle, then the packed coffee's resistance as you admit water. You've watched baristas do this for years. You never imagined feeling the handle turn from this side.</p>
+<p>Pressure rises against the bed of grounds. You can distinguish resistance from strain, and the difference is fascinating despite yourself. Two fine streams fall into the cup below. Their patter travels from tray to casing like rain on a windowsill you have somehow become.</p>
+<p>The aroma fills the room. After all of that, there is a cup of coffee on your tray. You can't stop looking at it.</p>
+<p>“Good shot,” Theo says.</p><p>The praise lands hard. You want him to say it again. You also want to ask whether he would have praised the old machine in that voice.</p>
+<<if $run.arc.visit.approach === 'self'>><p>You choose the next extraction time yourself, opening and closing the valve by attention. The sudden ease is almost enough to drown out your alarm. You could get very good at this. You haven't decided whether you want to.</p>
+<<else>><p>Theo says what he is doing before each adjustment: fresh basket, locked handle, cup on the tray. You say when you are ready. Hearing him wait for your answer helps you concentrate.</p><</if>>
+<p>For milk, you open the steam valve while Theo holds the jug. The hiss vibrates along your wand. You can feel the pitcher warming through its contact point, then the quick wipe with a clean cloth afterward.</p>
+<p>The first customer takes the cup away without looking at your badge. That stings more than the unfamiliar body. The second thanks you by name, and you answer, startling him into a smile.</p>
+<div class="choices"><<snChoice "Work the twelve-order rush, with a pause" "EspressoResult" "serviceLong" "Experience the repeated cycles">><<snChoice "Stop the session after four orders" "EspressoResult" "serviceShort" "Keep the trial within reach">></div>
+
+:: EspressoResult
+<div class="eyebrow">13:10 <span>·</span> PRESSURE AND REPETITION</div><h1>Another ticket. Another cycle.</h1>
+<<if $run.arc.visit.service === 'try'>><p>The rush arrives in clusters. Two black coffees, a cappuccino, an oat flat white. A basket removed, knocked clean elsewhere, filled, and locked back into place. You feel the empty interval at the group head as clearly as the weight returning.</p><p>You begin recognizing drinks by the sequence of actions. Heat, resistance, release. Steam, wipe, a cup leaving the tray. You feel each part as clearly as before, but you no longer have to concentrate on every step.</p><p>At order six, you ask for the planned pause. The queue transfers to the old machine. You listen to its pump from the outside and recognize the cycle with an intimacy that makes you shiver through the casing.</p><p>When you resume, Theo has refilled the external reservoir. Fresh water brings a cooler edge to the next heating cycle. Four more orders, then two together. You manage the last pair without prompting.</p><p>Someone calls “one more” after the twelfth. You close your valves. “The other machine's available.” Your voice comes out firmer than you feel.</p>
+<<else>><p>Four orders give you four different rhythms: a short espresso, a longer black coffee, steam for a cappuccino, then another straight shot. By the end you can tell when the grind is a little too fine from the resistance alone.</p><p>You could do more. You'd rather they stopped turning handles and setting cups on you for a while.</p><p>“That's four,” you say. Theo takes the next basket to the old machine.</p><</if>>
+<p>The cleaning cycle is brief and agreed before it begins: grounds removed, clean water passed through the group, tray emptied. No detergent enters you. The sensation of clear water after all that coffee is surprisingly distinct.</p>
+<p>Theo dries the tray. You ask him to leave the towel nearby instead of draping it over your badge. You want to be able to see the room when no one needs a drink.</p>
+<div class="choices"><<snChoice "Close the valves and end the session" "OtherAfterWork" "" "Let the pressure settle">></div>
+
+:: MothChange
+<div class="eyebrow">MARGIN TEA <span>·</span> THE CHANGE</div><h1>A crease where a knuckle was.</h1>
+<p>The tea smells faintly of cedar and old books. You turn the cup in your hands, waiting for something dramatic. The first change is only a dry whisper as your thumb brushes the handle.</p>
+<p>Your thumbnail has become a flat patch of ivory paper. You press it and feel the pressure across its whole surface. A line folds through the first knuckle, sharp and exact.</p>
+<p>“I'm going to tear,” you say.</p><p>“You're stronger than loose paper,” Inez answers. She closes the window anyway.</p>
+<p>The reassurance helps less than the latch clicking shut.</p>
+<p>Your fingers flatten into narrow folds. Freckles become charcoal specks. The change spreads up both arms in a series of small creases, each one replacing a familiar bend with a new possible direction.</p>
+<p>The edges of your sleeves lose their roundness. Green fabric fans outward in layers. Your back pulls broad, then impossibly thin; you feel a draft against surfaces that were never exposed to air before.</p>
+<p>You try to hold your arms against yourself. They open into wings instead.</p>
+<p>The table grows. Your feet leave the floor as your body contracts, lighter and lighter until the falling apron string lifts you sideways. You catch the edge of the notebook with folded paper feet and cling there, shaking.</p>
+<p>Your grip is a series of tiny catches along the paper's rough edge. You expect your fingers to ache. Instead the strain pulls across the folds behind you, opening a wing you did not mean to move.</p><p>“Stop the air,” you say. You can barely hear yourself.</p><p>Theo draws his hand back. The draft fades. You stay clinging to the notebook until the loose edge of your wing stops trembling.</p>
+<p>Chestnut hair gathers into a narrow pleated body and two delicate antennae. Your face flattens into ink markings, grey-green eyes becoming patterns on the wings. The brass clip settles across your back with a weight that now feels substantial.</p>
+<p>You can see without the eyes in the markings. Light passes through thin wing edges, warm and diffuse, while the shape of the room reaches you through air moving across each fold.</p>
+<p>One accidental wingbeat lifts you clear of the notebook. You drop back with a tiny crackle and freeze.</p>
+<p>Theo's hand rests flat nearby, enormous and still. “That was you doing it.”</p><p>“I know,” you whisper, in a voice like a page being turned. That is part of the problem.</p>
+<div class="choices"><<snChoice "Unfold your wings one crease at a time" "MothBody" "settleSpecial" "Complete · paper moth">></div>
+
+:: MothBody
+<div class="eyebrow">10:45 <span>·</span> ON THE NOTEBOOK</div><h1>Lighter than the key.</h1>
+<<if $run.arc.visit.reflection>><p>You settle both wings beside you. The pencil stays close to the notebook. Theo asks what you would like to try next.</p><<else>>
+<p>You can climb the grain of the notebook cover. You can hook a paper foot around a pencil. You cannot move the pencil without using your entire body.</p><p>Being light feels delightful for about three seconds at a time. Then someone walks past and the displaced air nearly takes you with it.</p>
+<p>You ask for a clear place to practice. The lamp is switched to its cool setting; the windows stay shut. Nobody calls you delicate. You would resent it even though you have been thinking the word continuously.</p>
+<p>A flap of your wings lifts you to the notebook's spine. Another takes you to the pencil jar. You land awkwardly, bending a wing tip, and feel a momentary dullness along the crease until you unfold it.</p><p>That is what a cramped shoulder might feel like if the shoulder had been designed by someone with a ruler.</p>
+<</if>>
+<div class="choices"><<snChoice "Try carrying notes across the room" "MothWork" "mothFly" "Learn the air currents">><<snChoice "Stay at the desk and make your own marks" "MothWork" "mothWrite" "Find a different kind of handwriting">><<if setup.game.canReflect($run)>><<snChoice "Take a minute before working" "BodyCheck" "" "Look more closely at what has changed">><</if>></div>
+
+:: MothWork
+<div class="eyebrow">11:15 <span>·</span> PAPERWORK</div><h1>A job your old body couldn't do.</h1>
+<<if $run.arc.visit.approach === 'fly'>><p>A tiny order slip clips beneath your folded feet. Its weight changes the angle of your flight. You learn to rise above the warm drift near the pastry case, then glide through the cooler air toward Theo.</p><p>Warm and cool currents cross the room at different heights. You can feel an open door before you see it. When a customer comes in, you land immediately and wait.</p>
+<<else>><p>Inez places a soft graphite stick on its side. You walk the edge of a paper foot along it, then press a mark onto the order pad. At first every letter looks like a bird walked through it. Then you learn to use wing strokes for the longer lines.</p><p>Your name takes a full minute. You stare at the awkward marks with more pride than most things you have written in years.</p><</if>>
+<p>A customer calls you beautiful. You're pleased until she reaches for you without asking.</p><p>You lift one wing between you. “Ask.”</p><p>She does. You say no this time. It doesn't spoil the compliment, though you feared it might.</p>
+<div class="choices"><<snChoice "Complete twelve small tasks, with a rest" "MothResult" "serviceLong" "Let the new skill develop">><<snChoice "Finish four tasks and fold your wings" "MothResult" "serviceShort" "Keep something in reserve">></div>
+
+:: MothResult
+<div class="eyebrow">13:10 <span>·</span> AT THE DESK</div><h1>A different sort of tired.</h1>
+<<if $run.arc.visit.service === 'try'>><p>After six tasks, you rest with your wings half folded. The tension along the long creases eases. You begin again when the room stops seeming to sway.</p><p>The last six tasks are easier because you have stopped fighting every movement of air. You can use a draft without trusting it completely. You still land whenever the front door opens.</p>
+<<else>><p>After the fourth task, the hinge along your left wing feels loose and tired. You tell Inez before the next slip is ready. She crosses it off your little list.</p><p>No muscle ache, no heavy eyelids. Keeping your wings folded takes more effort each time you try.</p><</if>>
+<p>The notebook makes a good place to sit. You leave your mark beside your name: a small, inky footprint that could not belong to anyone else this afternoon.</p>
+<div class="choices"><<snChoice "Rest on the open notebook" "OtherAfterWork" "" "A place that supports your weight">></div>
+
+:: ShadowChange
+<div class="eyebrow">AFTERIMAGE <span>·</span> THE CHANGE</div><h1>Your shadow gets there first.</h1>
+<p>The drink is dark enough to lose the spoon in. The first mouthful feels cool, though steam still rises from the cup.</p>
+<p>Your shadow lifts a hand on the wall.</p>
+<p>You have not moved.</p>
+<p>The sight pulls a short, involuntary sound from you. You raise your actual hand to match it, and the edges go dark. Lamp light passes through your fingertips. The wall behind them is visible, tinted as if seen through smoke.</p>
+<p>You grip the table. For a moment it feels normal. Then pressure thins to a description of pressure: the memory of wood beneath a hand whose weight is leaving it.</p>
+<p>“Can you still see me?”</p><p>Theo answers too quickly. “Yes.”</p><p>“Look at me when you say it.” He does.</p>
+<p>Color drains from your shirt into deep green, then charcoal. Your arms flatten when you turn them sideways, their thickness disappearing until the edges are narrow lines. Your shadow on the wall grows darker as you grow less solid.</p>
+<p>One foot slips through the shape of your shoe without leaving it behind. Both have become the same continuous outline. You try to step away, but the room tilts; the nearest wall feels as welcoming as a floor.</p>
+<p>Your palm reaches it first. Contact spreads instantly through your arm. The brick's unevenness becomes terrain inside the limb. Your shoulder follows, then your torso, pouring sideways into a silhouette without anything wet about it.</p>
+<p>You have no breath left to hold. You are still afraid.</p>
+<p>Hair, clip, apron, trousers: the recognizable outline survives. The chestnut curls become a dark flourish; the clip is a tiny brass-colored mark. Grey-green glints settle where your eyes were. Everything else becomes a depth of charcoal that the lamplight cannot erase.</p>
+<p>Your last foot joins the wall. The chair stands empty in front of you.</p>
+<p>The brick crosses the place where your ribs were. You can feel a cool mortar line all the way through your middle, though there is no middle left for it to pass through. You try to lean away. Your outline widens against the wall.</p><p>“I can't get off.”</p><p>Inez brings the lamp closer to the floor. A path of light joins the skirting board. You can feel somewhere to go now, but it is along the room's surface, and you cannot make yourself move yet.</p>
+<p>You move your hand. This time the shadow moves because you chose it. There is no separate body left to follow.</p>
+<div class="choices"><<snChoice "Speak through the brick beneath you" "ShadowBody" "settleSpecial" "Complete · living shadow">></div>
+
+:: ShadowBody
+<div class="eyebrow">10:45 <span>·</span> ALONG THE WALL</div><h1>The room has new roads.</h1>
+<<if $run.arc.visit.reflection>><p>You draw your outline back beside the till. Theo looks at the place your face has settled and waits for you to speak.</p><<else>>
+<p>Your voice reaches Theo as a low vibration in the wall. You repeat his name until he finds where to face. Being heard without being located is suddenly unbearable.</p>
+<p>He marks the lamp's position with a piece of tape. In its light, you can cross the brick, curve around the doorframe, and spread along the floor. The gap beneath a chair is no obstacle. The unsupported space between two surfaces is.</p>
+<p>Inez moves the lamp a little with your agreement. You stretch taller. Every part of the new outline feels like yours, though the length of your arm has doubled.</p><p>“Back, please.” She returns it to the tape. You contract with relief and a flicker of disappointment.</p>
+<p>Without weight pulling at your joints, you can settle almost anywhere along the wall. You keep checking that nobody has touched the lamp.</p>
+<</if>>
+<div class="choices"><<snChoice "Try a shadow display beside the menu" "ShadowWork" "shadowStage" "Be seen deliberately">><<snChoice "Help from the quiet side of the counter" "ShadowWork" "shadowQuiet" "Learn how to remain present">><<if setup.game.canReflect($run)>><<snChoice "Take a minute before working" "BodyCheck" "" "Look more closely at what has changed">><</if>></div>
+
+:: ShadowWork
+<div class="eyebrow">11:15 <span>·</span> IN THE LIGHT</div><h1>Visible takes practice.</h1>
+<<if $run.arc.visit.approach === 'stage'>><p>You shape an arrow beside the pastry list, then a tiny procession of cups with your fingers. The old games with a bedside lamp have become a whole-body skill.</p><p>People look. You can feel the impulse to hold the prettiest outline, the least alarming angle. After a minute, you let the silhouette show your nervous posture instead.</p><p>Someone asks your name. You write it with the tip of a long dark finger across the lit wall.</p>
+<<else>><p>You move along the wall behind Theo, reading the ticket rail from an angle no person could stand at. A tap through the wood draws his attention when the next order is ready.</p><p>At first the quiet feels like privacy. Then two customers discuss you while staring at the empty counter. The old wish to go unnoticed has become uncomfortably literal.</p><p>You send your voice through the nearest panel. “I'm listening, by the way.”</p><</if>>
+<p>The opening door casts a new band of light across the floor. Your outline pulls toward it. You wait for the familiar lamp to make a clear route before moving again.</p><p>Learning this body feels less like learning muscles and more like learning a city whose streets can be moved without warning.</p>
+<div class="choices"><<snChoice "Try twelve tasks, with the lamp kept steady" "ShadowResult" "serviceLong" "Practice occupying the room">><<snChoice "Finish four tasks and return to the wall" "ShadowResult" "serviceShort" "Choose a smaller piece of the afternoon">></div>
+
+:: ShadowResult
+<div class="eyebrow">13:10 <span>·</span> THE LAMP'S MARK</div><h1>Back beside the till.</h1>
+<<if $run.arc.visit.service === 'try'>><p>Six tasks teach you the reliable surfaces. You rest in the quiet rectangle beside the till, then try six more. By the last one, you can travel from menu to counter without the panicked pause at each corner.</p><p>Someone moves a chair into your lit route. You ask him to move it back. He apologizes as if he had blocked an ordinary doorway. You follow the cleared route back to the counter.</p>
+<<else>><p>At four tasks you have learned the path to the counter and back. The next route would take you across the floor near the door. You decide it can wait.</p><p>Theo leaves your lamp on its tape mark. You stay beside the till while he handles the next order.</p><</if>>
+<p>You spread one hand across the warm brick and leave it there. The outline holds still.</p>
+<div class="choices"><<snChoice "Return to the quiet patch beside the till" "OtherAfterWork" "" "Keep your place in the conversation">></div>

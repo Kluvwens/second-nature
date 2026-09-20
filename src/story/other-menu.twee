@@ -20,7 +20,7 @@
 <p>Inez asks you to estimate tomorrow's pastry order from the last few receipts. You give her a number, then start explaining why it might be wrong. She has already written it in the book.</p>
 <<else>>
 <p>Five shifts was the trial period you agreed with Inez. This is the fifth. After the next recovery day, you will talk about whether there is a sixth.</p>
-<p>Theo catches you studying the door. “You can like something here and still leave.”</p><p>“Can I be frightened of it and stay?”</p><p>He takes a moment. “I think that's a harder conversation. But yes.”</p>
+<p>Theo catches you studying the door. “You don't have to hate the place to leave.”</p><p>“Can I stay if I'm still scared?”</p><p>He takes a moment. “Yes. I think we'd have to talk about that a bit more.”</p>
 <p>Inez lets you arrange the counter while she stands in the doorway with her coffee. You move the takeaway lids. She notices and leaves them where you put them.</p>
 <</if>>
 <<include "AfterHoursCallback">>
@@ -37,7 +37,7 @@
 <p>Theo takes two cups off the tray. “You can slow down. They can survive another minute without coffee.”</p>
 <p>He goes to the back room and returns with something pale in a thick little mug. Toasted sugar, cream, an oddly clean metallic scent.</p>
 <p>“I make this when the room won't stop moving,” he says. “Clockwork Cream.”</p>
-<p>“One of those?”</p><p>“Yes. It changes more than your mood.” He sets it beside your untouched ordinary coffee. “No reason you have to.”</p>
+<p>“One of those?”</p><p>“Yes. It'll change your body, too.” He sets it beside your untouched ordinary coffee. “No reason you have to.”</p>
 <p>You turn the mug a fraction. The spoon rings against it, a small, exact note. For some reason you cannot quite leave the sound alone.</p>
 <<case 'cup'>>
 <h1>Len's quiet corner.</h1>
@@ -45,14 +45,14 @@
 <p>Inez prepares a little pot, but brings it to your end of the counter first. “She comes for twenty minutes when nobody can ask her to do anything.”</p>
 <p>“Must be nice.”</p><p>“Sometimes.” Inez puts down a small tasting cup. It smells of black tea and toasted rice. “Small Hours. She thought you might be curious.”</p>
 <p>You glance over. Len raises a hand, then goes back to the window. She doesn't wait to see whether you drink.</p>
-<p>“A special?”</p><p>Inez nods. “The room becomes rather larger. Take your time with that idea.”</p>
+<p>“A special?”</p><p>Inez nods. “You'll find the room rather large afterward. Take your time.”</p>
 <<case 'espresso'>>
 <h1>The machine has opinions.</h1>
 <p>The old espresso machine gives a sharp metallic complaint. Theo switches to its second group head with the exhausted familiarity of someone working around a bad knee.</p>
 <p>Inez lets you listen before explaining the pressure fault. “What would you do if it stopped completely?”</p>
 <p>“Tell people we're making tea?”</p><p>“A perfectly good answer.” She actually writes it down.</p>
 <p>Then she opens the narrow cupboard beneath the counter and mixes a dark, smoky drink. You have watched her make dozens of coffees. You have never seen that jar before.</p>
-<p>“House Pressure. An old house recipe.”</p><p>“That sounds like a joke at my expense.”</p><p>One corner of her mouth moves. “It gives you a different understanding of this end of the business.”</p>
+<p>“House Pressure. An old house recipe.”</p><p>“That sounds like a joke at my expense.”</p><p>One corner of her mouth moves. “It teaches you rather a lot about the equipment.”</p>
 <p>You know what the little unmarked jar means now. It still does not tell you what to expect from the cup.</p>
 <<case 'moth'>>
 <h1>A note in the tea tin.</h1>
@@ -60,14 +60,14 @@
 <p>You lift it carefully. There is no message. Just wings made by someone with patience and a few spare minutes.</p>
 <p>“An old customer's habit,” Inez says. She asks you to check the delivery before opening the tin.</p>
 <p>The brew smells of cedar and the inside of a bookshop. Theo sets a cup near your elbow while you straighten the torn wrapping paper.</p>
-<p>“Margin Tea. It makes that name quite literal.”</p><p>You look from the cup to the little folded moth. “This isn't just tea, is it?”</p><p>“No.” He waits beside the counter. You put the paper moth somewhere it cannot blow away.</p>
+<p>“Margin Tea.”</p><p>You look from the cup to the little folded moth. “This isn't just tea, is it?”</p><p>“No.” He waits beside the counter. You put the paper moth somewhere it cannot blow away.</p>
 <<case 'shadow'>>
 <h1>When the sign goes dark.</h1>
 <p>The bulbs above the window flicker out. The rest of the cafe carries on glowing, which somehow makes the dark patch more noticeable.</p>
 <p>Inez finds a spare lamp while you check the breaker labels. One label is in a hand unlike hers; a newer correction is written beneath it.</p>
 <p>“Who wrote the first one?”</p><p>“The woman I learned from.” Inez hands you the lamp before you can ask another question.</p>
 <p>When you return, there is a cup of almost-black coffee beside the wall. Its shadow seems a shade too deep.</p>
-<p>“Afterimage,” Inez says. “We used to make it after closing, when the room was quiet enough to notice.”</p>
+<p>“Afterimage,” Inez says. “We used to make it after closing. Easier to notice the changes when the room's quiet.”</p>
 <p>You have seen enough house recipes to recognize an invitation. Your shadow reaches the cup a moment before you do. You take your hand back, uncertain whether it really moved.</p>
 <</switch>>
 <<if $run.arc.history.length > 0>><p>You remember the <<= $run.arc.history[$run.arc.history.length - 1].hours >> hours the last special took to leave you. You hesitate before reaching for the cup.</p><</if>>
@@ -88,7 +88,7 @@
 <<if $run.arc.visit.service === 'try'>><p>Twelve tasks. You count them again, remembering where you hesitated and when you stopped needing help.</p><<else>><p>Four tasks, then the pause you asked for. Theo finishes the rush while you rest.</p><</if>>
 <<switch $run.arc.visit.form>>
 <<case 'robot'>><p>Your hands complete the motion of folding a towel after you put it down. The empty gesture frightens you more than the brass knuckles did. You interrupt the next cycle halfway through.</p><p>Nothing breaks. You still want to finish folding the towel, but you can leave it.</p><p>You make a deliberately crooked fold. A small, stupid act. You are almost angry at how relieved it makes you.</p>
-<<case 'cup'>><p>Empty again, you retain a slowly fading ring of warmth. The room sounds larger through your bowl. You had not expected to miss being held; admitting it makes you want to hide behind the sugar jar.</p><p>“I liked the warmth,” you say. Your voice rings thinly. “I did not like being discussed over.”</p><p>Theo writes both sentences down. He keeps them as two separate notes.</p>
+<<case 'cup'>><p>Empty again, you retain a slowly fading ring of warmth. The room sounds larger through your bowl. You had not expected to miss being held; admitting it makes you want to hide behind the sugar jar.</p><p>“I liked the warmth,” you say. Your voice rings thinly. “I didn't like people talking about me as if I couldn't hear them.”</p><p>Theo writes both sentences down. He keeps them as two separate notes.</p>
 <<case 'espresso'>><p>The last cup leaves your tray. You shut the valve yourself. Pressure settles, then the heater clicks off and an enormous interior quiet opens where the queue used to be.</p><p>You almost start another cycle, though the ticket rail is empty. You catch yourself waiting for someone to put a cup down.</p><p>“Talk to me for a minute,” you say through the grille. “About something I can't make.”</p><p>Theo tells you about a film he hated. For once, his inability to get to the point is exactly what you need.</p>
 <<case 'moth'>><p>A crease in your left wing has softened with use. Inez offers a dry paintbrush to smooth it, then waits for your answer.</p><p>You ask her to show you the brush first. The bristles look enormous. She holds them where you can see them, without laughing.</p>
 <<case 'shadow'>><p>The lamp moves back to its mark. Your outline stops stretching. You had felt the whole cafe through brick and floorboards; now the quiet patch behind the till feels almost private.</p><p>You catch yourself making your silhouette narrower when someone looks over. The old habit has survived the loss of a body. That feels unfair.</p>
@@ -107,7 +107,7 @@
 :: OrdinaryDebrief
 <div class="eyebrow">13:40 <span>·</span> THE SAME WAGE</div><h1>Getting the room ready.</h1>
 <<if $run.arc.visit.service === 'care'>><p>You move a lamp, add a folded towel beside the dry shelf, and put a pencil within reach of someone who might not have hands. Theo tests the bell from the back of the room.</p><p>“I used to think being good at this meant being unshockable,” he says. “Mostly it means remembering where the towels are.”</p>
-<<else>><p>Inez shows you the early ledger. It has recipes and times, but almost nothing about how anyone felt.</p><p>“These look like equipment records,” you say.</p><p>“Some of them were written that way.” She does not defend the pages. “Help me change what goes in the next one.”</p><</if>>
+<<else>><p>Inez shows you the early ledger. It has recipes and times, but almost nothing about how anyone felt.</p><p>“These look like equipment records,” you say.</p><p>“Some of them were written that way.” She does not defend the pages. “What would you put in the next one?”</p><</if>>
 <p>You served twelve customers and earned six dollars in shared tips. The wages are the same as on a special day.</p>
 <div class="choices"><<snChoice "Invite Nadia after work" "OtherFriend" "inviteNadia" "A familiar conversation">><<snChoice "Spend a little time alone" "OtherFriend" "privateNotes" "Think before explaining">></div>
 

@@ -6,7 +6,7 @@
 <p>Your fingers open in five exact angles. The joints are brass now, fitted between curved porcelain plates. You press your thumb into your palm and feel pressure without the familiar give of flesh. The sensation has a location and a strength so clear that it is almost a number.</p>
 <p>The change climbs both forearms. A dull ache becomes a series of small adjustments: click, align, settle. Beneath your sleeve, your elbow turns on a hinge you can suddenly picture from the inside.</p>
 <p>You try to stand too quickly. Your knees lock straight. Panic rises hot and human inside a body that has already stopped warming the chair.</p>
-<p>“Stay sitting,” Theo says. “One movement.”</p>
+<p>“Stay sitting,” Theo says. “Try one finger.”</p>
 <p>You bend a single finger. It obeys. Then another. The precision is astonishing. For half a second it feels easier than having hands ever did, and you are furious with yourself for noticing.</p>
 <p>The seam at your throat closes with a soft tick. Your next breath becomes optional. You gasp anyway. The sound comes through a small resonant chamber behind your collarbone.</p>
 <p>You try to clear your throat. A pure little note comes out, without the scrape you expect. You repeat the cough until Theo touches the table beside your hand.</p><p>“I can hear you.”</p><p>“I know. I can't hear <em>me</em>.” You say the sentence again, quieter. The pitch bends with your frustration. You hold on to that small imperfection while the porcelain climbs your neck.</p>
@@ -119,7 +119,7 @@
 <p>Water enters an ordinary tank. It is separate from the small hot core you identify as yourself, until you open an intake valve and feel a cool measure arrive in the boiler. No thirst. More like extending a hand into a stream and discovering that the hand is inside you.</p>
 <p>The heater answers your attention. Warmth builds. As the gauge needle rises, you feel an urge to release the pressure. You hadn't expected to want to do that.</p>
 <p>“I can make it stop,” you say, experimenting. The heater clicks off. The pressure remains, but the demand softens.</p>
-<p>“Your control,” Inez says. “We handle coffee and cups. You handle the valves. Either of us can call a pause.”</p>
+<p>“You decide when the valves open,” Inez says. “We'll handle the coffee and cups. Either of us can call a pause.”</p>
 <p>The first test uses plain water. A short release, then a clean stop. You hear the splash in a bowl on your tray and realize you can feel the vibration of each drop arriving.</p>
 <</if>>
 <div class="choices"><<snChoice "Control the pressure and timing yourself" "EspressoWork" "ownPressure" "Learn the cycle from inside">><<snChoice "Ask Theo to talk through each cycle" "EspressoWork" "sharePressure" "Keep a human rhythm beside yours">><<if setup.game.canReflect($run)>><<snChoice "Take a minute before working" "BodyCheck" "" "Look more closely at what has changed">><</if>></div>

@@ -47,7 +47,7 @@
 <p>The radio photograph is propped beside the till. Theo has spread several less flattering pieces of paper around it.</p>
 <p>“Don't laugh.”</p><p>“I haven't seen it yet.”</p><p>“Getting it in early.”</p>
 <p>There is a sketch of the kitchen doorway, a list of repairs, and an envelope covered in figures. You recognize the rent from the invoice folder.</p>
-<p>“I want a share,” he says. “In the business. I've got some money put aside. I know the equipment, I do half the ordering. I just haven't…”</p><p>“Asked?”</p><p>He nudges the envelope straight. “Made it an actual conversation.”</p>
+<p>“I want a share,” he says. “In the business. I've got some money put aside. I know the equipment, I do half the ordering. I just haven't…”</p><p>“Asked?”</p><p>He nudges the envelope straight. “Not properly.”</p>
 <p>You think of Inez asking you about deliveries and stock. Theo glances at the morning book, then away.</p><p>“I'm glad she's showing you things,” he says. “I'd like to know where that leaves me, too.”</p>
 <div class="choices"><<snChoice "Encourage him to ask Inez directly" "EveningReply" "theoAsk" "Help him find the first sentence">><<snChoice "Offer to check the figures with him" "EveningReply" "theoNumbers" "Start with the envelope">></div>
 <</if>>
@@ -103,7 +103,7 @@
 <p>You try out opening sentences. Theo rejects the first for sounding too formal, then produces one that sounds like a resignation.</p><p>Eventually he writes: <em>Could we set aside an hour to talk about my future here?</em></p>
 <p>“Don't put <em>no rush</em> after it,” you say.</p><p>He crosses out two words.</p><p>The envelope goes into his apron pocket. The figures stay on the counter.</p>
 <<case 'theoNumbers'>>
-<p>You find a supplier total counted twice. Theo makes a noise into both hands.</p><p>“Good that you asked someone.”</p><p>“Please let that be the last thing you say for thirty seconds.”</p>
+<p>You find a supplier total counted twice. Theo makes a noise into both hands.</p><p>“Good thing we checked.”</p><p>“Please let that be the last thing you say for thirty seconds.”</p>
 <p>You check the rest in companionable silence. When you finish, the number is smaller and he looks less miserable.</p><p>“Could we do that again before I talk to her?”</p><p>You put your initials beside the corrected total.</p>
 <<case 'beaFeeling'>>
 <p>“The coats have weight,” Bea says. “I feel it all the way down to the floor. Move one and the whole balance changes.”</p><p>As you watch, a wooden curl tightens beneath a sleeve. The coat settles. Bea's eyes half close.</p><p>“That feels good?”</p><p>“Very. The scratchy scarf doesn't. Would you move it down a hook?”</p>
@@ -125,7 +125,7 @@
 <<set _evenings = setup.game.eveningHistory($run)>>
 <<if _evenings.length && _evenings[_evenings.length - 1].shift === $run.arc.visit.number - 1>>
 <<switch _evenings[_evenings.length - 1].answer>>
-<<case 'nadiaHonest'>><p>Nadia's message arrives before opening: <em>You can call with the unfinished version.</em> You leave it unread for a minute so the notification stays on your screen.</p>
+<<case 'nadiaHonest'>><p>Nadia's message arrives before opening: <em>Call me even if you don't know where to start.</em> You leave it unread for a minute so the notification stays on your screen.</p>
 <<case 'nadiaOrdinary'>><p>Nadia sends a photograph of the shark poster. <em>Still six legs. Keeping an eye on it.</em> You nearly spill the first milk jug laughing.</p>
 <<case 'nadiaListen'>><p><em>Thanks for letting me be a mess yesterday,</em> Nadia writes. You send back: <em>You were very organized about it.</em></p>
 <<case 'nadiaFilm'>><p>Theo catches you grinning at your phone. Nadia has found another film with the same monster. It has seven legs on this poster.</p>

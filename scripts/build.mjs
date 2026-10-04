@@ -2,12 +2,22 @@ import { spawnSync } from 'node:child_process';
 import { mkdirSync, copyFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { TRAITS } from '../src/dice/engine.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const compiler = process.env.TWEEGO_BINARY || resolve(root, '.tools/tweego/tweego.exe');
 if (!existsSync(compiler)) throw new Error('Tweego is missing. Follow README.md to install the pinned local compiler.');
 const out = resolve(root, 'dist');
 mkdirSync(resolve(out, 'assets'), { recursive: true });
+mkdirSync(resolve(out, 'dice'), { recursive: true });
+for (const file of ['index.html', 'engine.mjs', 'combinations.mjs', 'deep-forms.mjs', 'playful-forms.mjs', 'guests.mjs', 'guest-views.mjs', 'form-views.mjs', 'board-view.mjs', 'art.mjs', 'app.mjs', 'table.css']) {
+  copyFileSync(resolve(root, 'src/dice', file), resolve(out, 'dice', file));
+}
+copyFileSync(resolve(root, 'assets/dice/house-map-v3.png'), resolve(out, 'dice/house-map-v3.png'));
+mkdirSync(resolve(out, 'dice/forms'), { recursive: true });
+for (const trait of TRAITS) {
+  copyFileSync(resolve(root, 'assets/dice/forms', trait.id + '.png'), resolve(out, 'dice/forms', trait.id + '.png'));
+}
 for (const [source, destination] of [
   ['assets/concepts/second-nature-cast-cel-v3.png', 'cast.png'],
   ['assets/characters/mara-honey-slime-v2.png', 'mara.png'],

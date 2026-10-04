@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reference-led Design"
+  short_description: "Compare real design work and fix generic interfaces"
+  default_prompt: "Use $reference-led-design to compare this interface with credited design work, identify the concrete visual problems, and improve it."

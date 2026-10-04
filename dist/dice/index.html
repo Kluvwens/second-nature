@@ -6,6 +6,15 @@
   <meta name="theme-color" content="#eeece5">
   <meta name="description" content="A solo board game from Second Nature. Roll dice, layer transformations, and collect three seals before the evening ends.">
   <title>Hex & Honey — Second Nature</title>
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem('hex-and-honey.theme'); } catch {}
+      if (theme !== 'dark' && theme !== 'light') theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#292a2d' : '#eeece5';
+    })();
+  </script>
   <link rel="stylesheet" href="./table.css">
 </head>
 <body>

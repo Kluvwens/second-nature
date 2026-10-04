@@ -153,3 +153,76 @@ fieldset { border:0; padding:0; margin:25px 0; }legend { font:11px var(--mono); 
 .form-trait > span:nth-child(2) { min-width:0; }
 .form-trait .stage-marks { position:absolute; right:8px; bottom:6px; }
 .form-trait { padding-bottom:18px; }
+
+/* Charcoal surfaces retain the printed red/ivory palette without a bright page. */
+:root[data-theme="dark"] {
+  color-scheme:dark;
+  --paper:#292a2d; --white:#ede7dc; --ink:#e9e5dc; --black:#222326;
+  --red:#ff806d; --hot:#ffa18e; --muted:#bbb7af; --line:#55565a;
+}
+.theme-button { white-space:nowrap; }
+.theme-button[aria-pressed="true"] .icon { fill:currentColor; }
+:root[data-theme="dark"] dialog { color-scheme:dark; }
+:root[data-theme="dark"] .table-section { color:var(--ink); }
+:root[data-theme="dark"] .board,
+:root[data-theme="dark"] .board-ink { background:#26272a; border-color:#545153; box-shadow:inset 0 0 0 7px #232427; }
+:root[data-theme="dark"] .route-underlay { stroke:#26272a; }
+:root[data-theme="dark"] .route-line { stroke:#db7465; }
+:root[data-theme="dark"] .tile-number { background:#26272a; }
+:root[data-theme="dark"] .primary,
+:root[data-theme="dark"] .power-die,
+:root[data-theme="dark"] .turn-track .current,
+:root[data-theme="dark"] .seal.claimed .icon,
+:root[data-theme="dark"] .route-option.selected .route-letter,
+:root[data-theme="dark"] .guest-marker,
+:root[data-theme="dark"] .on-loan .guest-monogram { background:#ba3d2d; color:#fff4e8; }
+:root[data-theme="dark"] .primary:hover { background:#9f3226; }
+:root[data-theme="dark"] .outline-button,
+:root[data-theme="dark"] .paper-button,
+:root[data-theme="dark"] .wild-choice { background:#3d3e42; color:var(--ink); box-shadow:inset 0 0 0 1px #69676a; }
+:root[data-theme="dark"] .outline-button:hover,
+:root[data-theme="dark"] .paper-button:hover,
+:root[data-theme="dark"] .wild-choice:hover { background:#505054; }
+:root[data-theme="dark"] .event-prose,
+:root[data-theme="dark"] .journal p,
+:root[data-theme="dark"] .rules-list li,
+:root[data-theme="dark"] .growth-pages p { color:#d6d1c8; }
+:root[data-theme="dark"] .seal,
+:root[data-theme="dark"] .empty-form,
+:root[data-theme="dark"] .character-name small,
+:root[data-theme="dark"] .form-trait small,
+:root[data-theme="dark"] .layer-choice small,
+:root[data-theme="dark"] .quiet-choice,
+:root[data-theme="dark"] .recipe-card p,
+:root[data-theme="dark"] .collection-item { color:var(--muted); }
+:root[data-theme="dark"] .collection-item strong { color:var(--ink); }
+:root[data-theme="dark"] .form-trait,
+:root[data-theme="dark"] .guest-choice,
+:root[data-theme="dark"] .recipe-card,
+:root[data-theme="dark"] .mind-pressure,
+:root[data-theme="dark"] .layer-choice,
+:root[data-theme="dark"] .boon-choice:has(input:checked) { background:#343539; border-color:#646367; }
+:root[data-theme="dark"] .form-trait { box-shadow:0 3px 0 #202124; }
+:root[data-theme="dark"] .route-option.selected,
+:root[data-theme="dark"] .route-option:hover,
+:root[data-theme="dark"] .choice:hover:not(:disabled),
+:root[data-theme="dark"] .layer-choice:hover:not(:disabled),
+:root[data-theme="dark"] .form-trait:hover,
+:root[data-theme="dark"] .guest-choice:hover:not(:disabled),
+:root[data-theme="dark"] .recipe-card:hover,
+:root[data-theme="dark"] .collection-item:hover { background:#414246; }
+:root[data-theme="dark"] .route-option { border-color:#777479; }
+:root[data-theme="dark"] .route-option.selected { border-color:var(--red); }
+:root[data-theme="dark"] .gain-note { color:#b3ce9f; }
+:root[data-theme="dark"] .loss-note,
+:root[data-theme="dark"] .pressure-reason,
+:root[data-theme="dark"] .planted-command > b,
+:root[data-theme="dark"] .guest-ticket .pickup-line { color:#ffad98; }
+:root[data-theme="dark"] .mind-warning { color:#ffad98!important; }
+:root[data-theme="dark"] .check-dice .die { background:#ded8cb; color:#292a2d; }
+:root[data-theme="dark"] #seed { background:#343539; border-color:#777479; }
+:root[data-theme="dark"] .trait-art { mix-blend-mode:normal; filter:brightness(.82); }
+@media(max-width:440px) {
+  .topbar { flex-wrap:wrap; }
+  .topbar nav { flex-wrap:wrap; }
+}

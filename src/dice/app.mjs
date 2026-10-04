@@ -12,6 +12,13 @@ let inspected = null, audio, boardMode = 'ink';
 try { if(localStorage.getItem('hex-and-honey.board-view')==='house') boardMode='house'; } catch {}
 
 function save() { try { localStorage.setItem(G.SAVE_KEY, JSON.stringify(state)); storageAvailable = true; } catch { storageAvailable = false; } }
+function themeControl() {
+  const dark = document.documentElement.dataset.theme === 'dark';
+  const toggle = app.querySelector('[data-action="theme"]');
+  toggle.setAttribute('aria-pressed', String(dark));
+  toggle.setAttribute('aria-label', 'Dark mode');
+  toggle.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+}
 function tone(notes = [330,440,660]) {
   if (!sound) return;
   try {
@@ -100,7 +107,7 @@ function render() {
   const rolled=state.phase==='rolled', canRoll=state.phase==='ready';
   const nextTile=rolled?G.TILES[G.destination(state)]:null;
   const focusAction=document.activeElement?.dataset?.action;
-  app.innerHTML = '<header class="topbar"><a class="brand" href="./" aria-label="Hex and Honey"><h1>Hex <i>&</i> Honey<span class="brand-dot">.</span></h1><small>A SECOND NATURE GAME</small></a><nav aria-label="Game tools">'+button('collection',icon('book')+'<span>Form book</span>','nav-button')+button('journal',icon('journal')+'<span>Journal</span>','nav-button journal-nav')+button('rules','<span class="help-mark">?</span><span>Rules</span>','nav-button')+button('sound',icon(sound?'volume':'mute'),'icon-button sound-button')+button('new','New game','outline-button')+'</nav></header>'+
+  app.innerHTML = '<header class="topbar"><a class="brand" href="./" aria-label="Hex and Honey"><h1>Hex <i>&</i> Honey<span class="brand-dot">.</span></h1><small>A SECOND NATURE GAME</small></a><nav aria-label="Game tools">'+button('collection',icon('book')+'<span>Form book</span>','nav-button')+button('journal',icon('journal')+'<span>Journal</span>','nav-button journal-nav')+button('rules','<span class="help-mark">?</span><span>Rules</span>','nav-button')+button('sound',icon(sound?'volume':'mute'),'icon-button sound-button')+button('theme','<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4a8.5 8.5 0 1 0 11.5 11.5Z"/></svg><span>Dark mode</span>','nav-button theme-button')+button('new','New game','outline-button')+'</nav></header>'+
   '<main><div class="run-strip"><div class="turn-counter"><span>TURN</span><strong>'+String(Math.min(state.turn+(canRoll||rolled?1:0),G.MAX_TURNS)).padStart(2,'0')+'</strong><span>/ '+G.MAX_TURNS+'</span></div>'+B.seals(state)+'<div class="resources"><span title="Gold buys changes and luck">'+icon('coin')+'<b>'+state.gold+'</b> gold</span><span title="Spend luck on rerolls and layers">'+icon('stars')+'<b>'+state.luck+'</b> luck</span></div></div>'+
   '<nav class="table-jumps" aria-label="Table sections"><a href="#board">01 Board</a><a href="#encounter">02 Decision</a><a href="#form">03 Your form</a></nav>'+
   '<div class="game-layout phase-'+state.phase+'"><section id="board" class="table-section" aria-label="Game board"><div class="table-heading"><span><b>01</b> THE HOUSE</span>'+button('board-view',boardMode==='ink'?'View illustration ↗':'View graphic board ↗','view-switch')+'</div>'+B.board(state,boardMode)+
@@ -108,6 +115,7 @@ function render() {
   '</section><aside id="encounter" class="encounter-panel" aria-label="Current encounter"><div class="panel-label"><span><b>02</b> '+(state.phase==='result'?'THE AFTERMATH':state.phase==='ended'?'THE END':state.phase==='encounter'?'YOUR ENCOUNTER':'YOUR DECISION')+'</span><span class="phase-dot"></span></div><div class="event-content">'+V.mindPanel(state)+encounter()+'</div></aside></div>'+
   V.playerSheet(state)+'<div class="under-table">'+H.guestStrip(state)+'<details class="board-key"><summary>Read the board</summary><div class="board-legend">'+['change','trial','fortune','chaos','market','rest','mirror'].map(t=>'<span>'+icon(G.TILE_ICONS[t])+({change:'Change',trial:'Trial',fortune:'Fortune',chaos:'Wild',market:'Market',rest:'Rest',mirror:'Mirror'})[t]+'</span>').join('')+'</div><p>Follow the numbered line. The red piece is you; the outlined piece is your selected destination. Letters mark guests with something to return.</p></details></div>'+
   '<footer><span>'+(storageAvailable?'Saved as you play':'Autosave unavailable · keep this tab open')+'</span><a href="../">Second Nature '+icon('arrow')+'</a></footer></main>';
+  themeControl();
   document.querySelector('.sound-button').setAttribute('aria-label',sound?'Mute game sounds':'Enable game sounds');
   document.querySelector('.sound-button').setAttribute('aria-pressed',String(sound));
   document.querySelector('.swap-button').setAttribute('aria-label','Swap movement and power dice');
@@ -142,6 +150,14 @@ function newGameDialog() { showDialog('Another strange evening', `<p class="dial
 function collection() { showDialog('Form book', `${button('combinations','See the combination recipes '+icon('arrow'),'paper-button book-recipes-link')}<p class="dialog-intro">${state.seen.length} of ${G.TRAITS.length} changes discovered this evening. You can hold ten traits, with at most three in each slot and four stages per trait. The illustrations show where changes can lead; open a trait to read each stage.</p><div class="collection-grid">${G.TRAITS.map(t=>`<button type="button" data-action="trait:${t.id}" class="collection-item ${state.seen.includes(t.id)?'discovered':''}">${traitArt(t.id)}<strong>${t.name}</strong><small>${t.slot} · +1 ${G.STATS[t.stat]}</small><p>${state.seen.includes(t.id)?t.detail:'Still waiting somewhere on the board.'}</p>${G.MIND_RULES[t.id]?'<p class="mind-warning">'+G.MIND_RULES[t.id]+'</p>':''}</button>`).join('')}</div>`, 'wide-dialog'); }
 async function act(action) {
   if (busy) return;
+  if (action==='theme') {
+    const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = theme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#292a2d' : '#eeece5');
+    try { localStorage.setItem('hex-and-honey.theme', theme); } catch {}
+    themeControl();
+    return;
+  }
   if (action==='close') { dialog.close(); return; }
   if (action==='rules') return rules();
   if (action==='new') return newGameDialog();
